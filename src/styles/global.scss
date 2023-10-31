@@ -1,0 +1,59 @@
+/* Import variables and settings */
+@import 'variables';
+
+/* Apply CSS resets or normalization */
+//@import 'reset'; 
+
+h1 {
+    font-family: $font-heading;
+    font-size: 90px;
+    color: $text-color;
+}
+
+h2 {
+    font-family: $font-heading;
+    font-size: 50px;
+    color: $text-color;
+}
+
+h3 {
+    font-family: $font-heading;
+    font-size: 25px;
+    color: $text-color;
+}
+
+h4 {
+    font-family: $font-text;
+    font-size: 25px;
+    color: $text-color;
+    font-weight: regular;
+}
+
+p {
+    font-family: $font-text;
+    font-size: 16px;
+    color: $text-color;
+    line-height: 30px;
+}
+
+.dark-mode {
+  // Dark mode styles
+  background-color: $background-color-dark;
+  color: $text-color-dark;
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    color: $text-color-dark; // Change text color for dark mode
+  }
+  // Add other dark mode styles
+}
+
+.light-mode {
+  // Light mode styles
+  background-color: $background-color;
+  color: $text-color;
+  // Add other light mode styles
+}

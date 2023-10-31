@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Sansita");
+
+//theme
+$dark-theme: var(--theme, true) !default;
+//colors
+$primary-color: #ffd1d1;
+$text-color: #141736;
+$secondary-color: #d93f52;
+$background-color: #fbfbfb;
+$sun-color: #FFDA58;
+
+$primary-color-dark: #292e5a;
+$text-color-dark: #fbfbfb;
+$secondary-color-dark: #fa89aa;
+$background-color-dark: #141736;
+
+//text
+$font-text: "Montserrat", sans-serif;
+$font-heading: "Sansita", sans-serif;

@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import ModeToggler from "./ModeToggler";
 
-function Navbar() {
+function Navbar({toggleTheme}) {
   const navigate = useNavigate();
 
   function scrollToSection(id) {
@@ -12,6 +13,9 @@ function Navbar() {
   return (
     <nav>
       <ul>
+      <li>
+          <ModeToggler toggleTheme={toggleTheme}/>
+        </li>
         <li>
           <a
             href="/#hero"
