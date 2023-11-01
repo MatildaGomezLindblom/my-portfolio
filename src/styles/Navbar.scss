@@ -1,0 +1,41 @@
+@import 'variables';
+
+.navbar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: none;
+    padding: 10px 10px;
+    display: flex; /* Make the container a flex container */
+    justify-content: space-between; /* Push items to the edges */
+    align-items: center; /* Vertically center items */
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-list li {
+    margin-right: 50px;
+}
+
+.navbar-list a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: $font-heading;
+    color: $text-color;
+    transition: all 0.4s ease;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+
+.hero-link {
+    margin-right: auto; /* Pushes the "Hero" link to the left */
+}

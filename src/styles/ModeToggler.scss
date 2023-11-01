@@ -15,6 +15,7 @@
     padding: 0 5px;
     cursor: pointer;
     transition: all 0.3s;
+    border: 1px solid $primary-color;
   }
 
   .handle {
@@ -41,6 +42,7 @@
       rgb(45, 71, 143) -5.2%,
       rgb(4, 5, 26) 103.3%
     );
+    border: 1px solid $primary-color-dark;
   }
 
   .handle {
@@ -55,8 +57,8 @@
 
     &::before {
         content: '';
-        height: 15px; /* Adjust the size as needed */
-        width: 15px; /* Adjust the size as needed */
+        height: 15px; 
+        width: 15px; 
         background-color: $background-color-dark;
         border-radius: 50%;
         transform: translate(20%, -10%);
