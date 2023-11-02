@@ -78,7 +78,7 @@ function Navbar({ toggleTheme }) {
           <ModeToggler toggleTheme={toggleTheme} />
         </li>
       </ul>
-        <FaBars className="menu-toggle" onClick={toggleMenu} />
+      <FaBars className="menu-toggle" onClick={toggleMenu} />
     </nav>
   );
 }

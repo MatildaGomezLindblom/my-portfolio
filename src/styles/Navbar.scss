@@ -51,7 +51,8 @@
     cursor: pointer;
     position: absolute;
     top: 10;
-    right: 0;
+    right: auto;
+    padding-left: 90vw;
     color: $text-color;
   transition: all 0.4s ease;
 
