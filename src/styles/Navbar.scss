@@ -5,14 +5,16 @@
 }
 
 .navbar-container {
+  min-width: 450px;
   position: fixed;
+  z-index: 100;
   top: 0;
-  width: 100%;
+  width: 100vw;
   background-color: none;
   padding: 10px 10px;
-  display: flex; /* Make the container a flex container */
-  justify-content: space-between; /* Push items to the edges */
-  align-items: center; /* Vertically center items */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
 }
 
 .navbar-list {
@@ -43,16 +45,14 @@
   margin-right: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
   .menu-toggle {
     width: 30px;
     height: 30px;
     display: block;
     cursor: pointer;
-    position: absolute;
-    top: 10;
-    right: auto;
-    padding-left: 90vw;
+    position: relative;
+    margin-right: 40px;
     color: $text-color;
   transition: all 0.4s ease;
 
@@ -66,11 +66,12 @@
     flex-direction: column;
     gap: 0;
     top: 70px;
-    left: -100%;
+    left: -130%;
     text-align: start;
     width: 100%;
     transition: 0.7s ease-in-out;
     padding: 10px;
+    //background-color: $background-color;
   }
 
   .navbar-list.active {
@@ -80,8 +81,6 @@
   .navbar-list li {
     margin: 16px 0;
   }
-
-  /* Style other elements as needed */
 }
 
 .dark-mode {

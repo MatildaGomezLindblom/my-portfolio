@@ -5,6 +5,7 @@ import Hero from './components/hero/Hero';
 import About from './components/about/About';
 import MoreAboutMe from './components/about/MoreAboutMe';
 
+
 import './styles/global.scss';
 import { useTheme } from './components/ThemeContext'; // Import the useTheme hook
 
@@ -12,9 +13,9 @@ function App() {
   const { isDarkTheme, toggleTheme } = useTheme(); // Access the theme and toggleTheme function
 
   return (
-    <Router>
+    <div className="app-container">
+      <Router>
       <div
-        style={{ backgroundColor: 'blue', width: '100vw', height: '100vh' }}
         className={isDarkTheme ? 'dark-mode' : 'light-mode'}
       >
         <Navbar toggleTheme={toggleTheme} />
@@ -37,6 +38,8 @@ function App() {
         </Routes>
       </div>
     </Router>
+
+    </div>
   );
 }
 
