@@ -25,8 +25,8 @@
 .sun {
   z-index: 1;
   display: inline-block;
-  width: 20vw;
-  height: 20vw;
+  width: 15vw;
+  height: 15vw;
   position: relative;
   border-radius: 50%;
   margin-left: auto;
@@ -94,8 +94,8 @@ a {
   .moon {
     z-index: 1;
     display: inline-block;
-    width: 20vw;
-    height: 20vw;
+    width: 15vw;
+    height: 15vw;
     position: relative;
     border-radius: 50%;
     margin-left: auto;
@@ -123,12 +123,7 @@ a {
     z-index: 0;
     position: absolute;
     top: 0;
-    width: 1.3vw;
     display: block;
-  }
-
-  #star3 {
-    width: 0.5vw;
   }
 
   .cloud {

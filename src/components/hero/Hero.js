@@ -11,10 +11,11 @@ import { useTheme } from "../ThemeContext";
 function Hero({toggleTheme}) {
   const { isDarkTheme } = useTheme();
 
+  //clouds and star placements
   const cloudPlacements = [
-    { x: "10vw", y: "10vh", duration: 4.5 },
+    { x: "10vw", y: "10vh", duration: 3.5 },
     { x: "50vw", y: "20vh", duration: 3.2 },
-    { x: "25vw", y: "40vh", duration: 4.8 },
+    { x: "25vw", y: "40vh", duration: 3.8 },
   ];
 
   const starPlacements = [
@@ -41,13 +42,14 @@ function Hero({toggleTheme}) {
     { x: "60vw", y: "64vh", duration: 4.8 },
   ];
 
+  //generate and animate clouds
   const clouds = cloudPlacements.map((cloud, index) => (
     <motion.img
       key={index}
       className="cloud"
       src={Cloud}
       alt="Cloud"
-      initial={{ x: cloud.x, y: cloud.y, opacity: 0.2 }}
+      initial={{ x: cloud.x, y: cloud.y, opacity: 0 }}
       animate={{ x: isDarkTheme ? "-90vw" : cloud.x, 
                 opacity: 1,
                 }}
@@ -55,51 +57,35 @@ function Hero({toggleTheme}) {
     />
   ));
 
-  const stars = starPlacements.map((star, index) => (
-    <motion.img
-      key={index}
-      className="star"
-      src={Star1}
-      alt="Star"
-      initial={{ x: star.x, y: star.y, opacity: 0.2 }}
-      animate={{ y: !isDarkTheme ? "90vh" : star.y, 
-                opacity: 1,
-                rotate: 180, }}
-      transition={{ duration: star.duration, type: "spring",  bounce: 0.1 }}
-    />
-  ));
+  //generate and animate stars
+  const stars = [].concat(
+    generateStars(starPlacements, Star1, "1.3vw"),
+    generateStars(starPlacements2, Star2, "1.3vw"),
+    generateStars(starPlacements3, Star3, "0.3vw")
+  );
 
-  const stars2 = starPlacements2.map((star, index) => (
-    <motion.img
-      key={index}
-      className="star"
-      src={Star2}
-      alt="Star"
-      initial={{ x: star.x, y: star.y, opacity: 0.2 }}
-      animate={{ y: !isDarkTheme ? "90vh" : star.y, 
-                opacity: 1,
-                rotate: 180, }}
-      transition={{ duration: star.duration, type: "spring",  bounce: 0.1 }}
-    />
-  ));
+  function generateStars(placements, imageSource, starWidth) {
+    return placements.map((star, index) => (
+      <motion.img
+        key={`star-${index}`}
+        className="star"
+        src={imageSource}
+        alt="Star"
+        style={{ width: starWidth }}
+        initial={{ x: star.x, y: star.y, opacity: 0 }}
+        animate={{
+          y: !isDarkTheme ? "90vh" : star.y,
+          opacity: 1,
+          rotate: 180,
+        }}
+        transition={{ duration: star.duration, type: "spring", bounce: 0.1 }}
+      />
+    ));
+  }
 
-  const stars3 = starPlacements3.map((star, index) => (
-    <motion.img
-      key={index}
-      className="star"
-      id="star3"
-      src={Star3}
-      alt="Star"
-      initial={{ x: star.x, y: star.y, opacity: 0.2 }}
-      animate={{ y: !isDarkTheme ? "90vh" : star.y, 
-                opacity: 1,
-                rotate: 180, }}
-      transition={{ duration: star.duration, type: "spring",  bounce: 0.1 }}
-    />
-  ));
-
+  //change theme
   const handleToggle = () => {
-    toggleTheme(); // Call the toggleTheme function to change the theme
+    toggleTheme(); 
   };
 
 
@@ -110,7 +96,7 @@ function Hero({toggleTheme}) {
       <div className="hero-grid">
         <div className="hero-text">
           {isDarkTheme ? 
-            <h2>Designer by <a onClick={handleToggle}>day</a>, programmer by night.</h2> :
+            <h2>Programmer by <a onClick={handleToggle}>day</a>, designer by night.</h2> :
             <h2>Programmer by day, designer by <a onClick={handleToggle}>night</a>.</h2>
           }
         </div>
@@ -137,8 +123,6 @@ function Hero({toggleTheme}) {
         transition={{ duration: 3, ease: "easeInOut" }}
       /> */}
       <div>{stars}</div>
-      <div>{stars2}</div>
-      <div>{stars3}</div>
       <div>{clouds}</div>
     </div>
   );
