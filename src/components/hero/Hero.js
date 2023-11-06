@@ -7,8 +7,9 @@ import Star2 from "../../assets/hero/star2.svg";
 import Star3 from "../../assets/hero/star3.svg";
 import Cloud from "../../assets/hero/cloud.svg";
 import { useTheme } from "../ThemeContext";
+import ButtonSecondary from "../ButtonSecondary";
 
-function Hero({toggleTheme}) {
+function Hero({ toggleTheme }) {
   const { isDarkTheme } = useTheme();
 
   //clouds and star placements
@@ -50,9 +51,7 @@ function Hero({toggleTheme}) {
       src={Cloud}
       alt="Cloud"
       initial={{ x: cloud.x, y: cloud.y, opacity: 0 }}
-      animate={{ x: isDarkTheme ? "-90vw" : cloud.x, 
-                opacity: 1,
-                }}
+      animate={{ x: isDarkTheme ? "-90vw" : cloud.x, opacity: 1 }}
       transition={{ duration: cloud.duration, ease: "easeInOut" }}
     />
   ));
@@ -85,21 +84,42 @@ function Hero({toggleTheme}) {
 
   //change theme
   const handleToggle = () => {
-    toggleTheme(); 
+    toggleTheme();
   };
 
+  const handleClick = () => {
+
+  };
 
   return (
     <div
       className={`hero-container ${isDarkTheme ? "dark-mode" : "light-mode"}`}
     >
       <div className="hero-grid">
-        <div className="hero-text">
-          {isDarkTheme ? 
-            <h2>Programmer by <a onClick={handleToggle}>day</a>, designer by night.</h2> :
-            <h2>Programmer by day, designer by <a onClick={handleToggle}>night</a>.</h2>
-          }
-        </div>
+        <motion.div
+          className="hero-text"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 3, duration: 1, ease: "easeIn" }}
+        >
+          {isDarkTheme ? (
+            <div>
+              <h2>
+                Programmer by <a onClick={handleToggle}>day</a>, designer by
+                night.
+              </h2>
+              <ButtonSecondary onClick={handleClick}>Kontakta mig</ButtonSecondary>
+            </div>
+          ) : (
+            <div>
+              <h2>
+                Programmer by day, designer by{" "}
+                <a onClick={handleToggle}>night</a>.
+              </h2>
+              <ButtonSecondary onClick={handleClick}>Kontakta mig</ButtonSecondary>
+            </div>
+          )}
+        </motion.div>
         <motion.div
           className="sun"
           initial={{ y: isDarkTheme ? "10vh" : "90vh", opacity: 0.2 }}
