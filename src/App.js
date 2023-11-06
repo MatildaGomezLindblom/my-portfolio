@@ -27,7 +27,7 @@ function App() {
             element={
               <div>
                 <section id="hero">
-                  <Hero />
+                  <Hero toggleTheme={toggleTheme}/>
                 </section>
                 <section id="about">
                   <About />

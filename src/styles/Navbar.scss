@@ -9,12 +9,12 @@
   position: fixed;
   z-index: 100;
   top: 0;
-  width: 100vw;
+  width: 100%;
   background-color: none;
   padding: 10px 10px;
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-list {
@@ -54,11 +54,11 @@
     position: relative;
     margin-right: 40px;
     color: $text-color;
-  transition: all 0.4s ease;
+    transition: all 0.4s ease;
 
     &:hover {
-        color: $secondary-color;
-      }
+      color: $secondary-color;
+    }
   }
 
   .navbar-list {

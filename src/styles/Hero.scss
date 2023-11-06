@@ -1,53 +1,145 @@
-@import 'variables';
+@import "variables";
 
 .hero-container {
-    min-width: 450px;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background: linear-gradient(90deg, rgba(255,209,209,1) 0%, rgba(251,251,251,1) 100%);
+  min-width: 450px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 209, 209, 1) 0%,
+    rgba(251, 251, 251, 1) 100%
+  );
 }
 
 .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin: 0;
-    padding: 10vw;
-  }
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 10vw;
+}
 
-.celestial-body {
-    display: inline-block;
-    width: 20vw;
-    height: 20vw;
-    background-color: $sun-color;
-    position: relative;
-    border-radius: 50%;
-    margin-left: auto;
+.sun {
+  z-index: 1;
+  display: inline-block;
+  width: 20vw;
+  height: 20vw;
+  position: relative;
+  border-radius: 50%;
+  margin-left: auto;
+  background-color: $sun-color;
+  box-shadow:
+    inset 0 0 50px #ffab2d,
+    /* inner white */ inset 20px 0 80px $sun-color,
+    /* inner left magenta short */ inset -20px 0 80px #d93f52,
+    /* inner right cyan short */ inset 20px 0 300px $sun-color,
+    /* inner left magenta broad */ inset -20px 0 300px #fbfbfb,
+    /* inner right cyan broad */ 0 0 50px #ff9900,
+    /* outer white */ -10px 0 80px $sun-color,
+    /* outer left magenta */ 10px 0 80px #fbfbfb; /* outer right cyan */
+}
+
+.cloud {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  width: 30vw;
+  display: center;
+}
+
+.moon {
+  display: none;
+}
+
+.stars {
+  display: none;
+}
+.star {
+  display: none;
 }
 
 .hero-text {
-    padding-top: 40%;
+  padding-top: 10vh;
+  z-index: 2;
+}
+
+a {
+  font-family: $font-heading;
+  color: $text-color;
+  transition: all 0.4s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $secondary-color;
+  }
 }
 
 .dark-mode {
-    .hero-container {
-        width: 100vw;
-        height: 100vh;
-        background: linear-gradient(90deg, rgba(22,23,30,1) 0%, rgba(41,47,95,1) 100%);
-    }
+  .hero-container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+      90deg,
+      rgba(22, 23, 30, 1) 0%,
+      rgba(41, 47, 95, 1) 100%
+    );
+  }
+  .sun {
+    display: none;
+  }
 
-    .celestial-body {
-        background-color: $moon-color;
-    }
+  .moon {
+    z-index: 1;
+    display: inline-block;
+    width: 20vw;
+    height: 20vw;
+    position: relative;
+    border-radius: 50%;
+    margin-left: auto;
+    background-color: $moon-color;
+    box-shadow:
+      inset 0 0 50px #b4baf7,
+      /* inner white */ inset 20px 0 80px $moon-color,
+      /* inner left magenta short */ inset -20px 0 80px #fa89aa,
+      /* inner right cyan short */ inset 20px 0 300px $moon-color,
+      /* inner left magenta broad */ inset -20px 0 300px #fbfbfb,
+      /* inner right cyan broad */ 0 0 50px #b4baf7,
+      /* outer white */ -10px 0 80px $moon-color,
+      /* outer left magenta */ 10px 0 80px #fbfbfb; /* outer right cyan */
+  }
 
-    .stars {
-        z-index: 0;
-        position: absolute;
-        top: 0;
-        width: 100vw;
-        display: center;
+  .stars {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    display: block;
+  }
+
+  .star {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    width: 1.3vw;
+    display: block;
+  }
+
+  #star3 {
+    width: 0.5vw;
+  }
+
+  .cloud {
+    display: none;
+  }
+  
+  a {
+    color: $text-color-dark;
+
+    &:hover {
+      color: $secondary-color-dark;
     }
   }
+}
