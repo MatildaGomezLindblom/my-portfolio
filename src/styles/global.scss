@@ -108,6 +108,64 @@ body {
   transform: scale(0.95);
 }
 
+.primary-button {
+  position: relative; 
+  color: $background-color;
+  background-color: $text-color;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-flex;
+  padding: 11px 26px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 2px;
+  border: none;
+  transition: background-color 0.5s, color 0.3s;
+  overflow: hidden;
+}
+
+.primary-button:hover {
+  color: $background-color;
+}
+
+.primary-button::before,
+.primary-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  bottom: -200%;
+  left: 0;
+  background-color: $secondary-color;
+  z-index: -1;
+  transition: all 300ms ease-in;
+  border-radius: 40px 40px 0px 0px;
+}
+
+.primary-button::before {
+  opacity: 0.5;
+}
+
+.primary-button::after {
+  transition-delay: 0.15s;
+}
+
+
+.primary-button:hover::before,
+.primary-button:hover::after {
+  bottom: 0; 
+}
+
+.primary-button:active {
+  transform: scale(0.95);
+}
+
+.primary-button:hover {
+  color: $background-color;
+  z-index: 2; 
+}
 
 .dark-mode {
   // Dark mode styles

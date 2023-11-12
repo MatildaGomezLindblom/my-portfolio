@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/About.scss";
+import ButtonPrimary from "../ButtonPrimary";
+import { FaArrowRight } from 'react-icons/fa';
+
 
 function About() {
   return (
@@ -19,6 +22,7 @@ function About() {
         </svg>
       </div>
       <Link to="/MoreAboutMe">More About Me</Link>
+      <ButtonPrimary>Mer om mig<FaArrowRight /></ButtonPrimary>
     </div>
   );
 }
