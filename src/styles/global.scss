@@ -55,8 +55,7 @@ body {
 }
 
 .secondary-button {
-  /* Your button styles go here */
-  position: relative; /* Add this to establish a positioning context */
+  position: relative; 
   color: $secondary-color;
   background-color: transparent;
   font-family: "Montserrat", sans-serif;
@@ -74,7 +73,7 @@ body {
 }
 
 .secondary-button:hover {
-  color: #fff;
+  color: $background-color;
 }
 
 .secondary-button::before,
@@ -82,25 +81,31 @@ body {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%;
-  top: -100%;
+  height: 200%;
+  bottom: -200%;
   left: 0;
   background-color: $secondary-color;
   z-index: -1;
-  transition: all 200ms ease-in;
+  transition: all 300ms ease-in;
+  border-radius: 40px 40px 0px 0px;
 }
 
 .secondary-button::before {
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 .secondary-button::after {
-  transition-delay: 0.1s;
+  transition-delay: 0.15s;
 }
+
 
 .secondary-button:hover::before,
 .secondary-button:hover::after {
-  top: 0; 
+  bottom: 0; 
+}
+
+.secondary-button:active {
+  transform: scale(0.95);
 }
 
 
@@ -116,7 +121,20 @@ body {
   p {
     color: $text-color-dark; // Change text color for dark mode
   }
-  // Add other dark mode styles
+  
+  .secondary-button {
+    color: $secondary-color-dark;
+    border: 2px solid $secondary-color-dark;
+  }
+  
+  .secondary-button:hover {
+    color: $background-color-dark;
+  }
+  
+  .secondary-button::before,
+  .secondary-button::after {
+    background-color: $secondary-color-dark;
+  }
 }
 
 .light-mode {

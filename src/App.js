@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/hero/Hero';
 import About from './components/about/About';
 import MoreAboutMe from './components/about/MoreAboutMe';
+import Contact from './components/contact/Contact';
 
 
 import './styles/global.scss';
@@ -31,6 +32,9 @@ function App() {
                 </section>
                 <section id="about">
                   <About />
+                </section>
+                <section id="contact">
+                  <Contact />
                 </section>
               </div>
             }

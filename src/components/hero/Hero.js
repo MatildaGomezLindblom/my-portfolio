@@ -87,9 +87,11 @@ function Hero({ toggleTheme }) {
     toggleTheme();
   };
 
-  const handleClick = () => {
-
-  };
+  //Scroll to contact section
+  function scrollToSection(id) {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: "smooth" });
+  }
 
   return (
     <div
@@ -98,9 +100,9 @@ function Hero({ toggleTheme }) {
       <div className="hero-grid">
         <motion.div
           className="hero-text"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 3, duration: 1, ease: "easeIn" }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.5, duration: 0.5, ease: "easeIn" }}
         >
           {isDarkTheme ? (
             <div>
@@ -108,7 +110,15 @@ function Hero({ toggleTheme }) {
                 Programmer by <a onClick={handleToggle}>day</a>, designer by
                 night.
               </h2>
-              <ButtonSecondary onClick={handleClick}>Kontakta mig</ButtonSecondary>
+              <ButtonSecondary
+                href="/#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("contact");
+                }}
+              >
+                Kontakta mig
+              </ButtonSecondary>
             </div>
           ) : (
             <div>
@@ -116,7 +126,15 @@ function Hero({ toggleTheme }) {
                 Programmer by day, designer by{" "}
                 <a onClick={handleToggle}>night</a>.
               </h2>
-              <ButtonSecondary onClick={handleClick}>Kontakta mig</ButtonSecondary>
+              <ButtonSecondary
+                href="/#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("contact");
+                }}
+              >
+                Kontakta mig
+              </ButtonSecondary>
             </div>
           )}
         </motion.div>
@@ -133,15 +151,6 @@ function Hero({ toggleTheme }) {
           transition={{ duration: 2.5, ease: "easeOut" }}
         />
       </div>
-
-      {/* <motion.img
-        className="stars"
-        src={Stars}
-        alt="Stars"
-        initial={{ y: !isDarkTheme ? "10vh" : "90vh", opacity: 0.2 }}
-          animate={{ y: !isDarkTheme ? "90vh" : "10vh", opacity: 1 }}
-        transition={{ duration: 3, ease: "easeInOut" }}
-      /> */}
       <div>{stars}</div>
       <div>{clouds}</div>
     </div>

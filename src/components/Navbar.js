@@ -70,6 +70,17 @@ function Navbar({ toggleTheme }) {
           </a>
         </li>
         <li onClick={removeActive}>
+          <a
+            href="/#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("contact");
+            }}
+          >
+            KONTAKT
+          </a>
+        </li>
+        <li onClick={removeActive}>
           <a href="./CV.pdf" download="CV.pdf">
             CV
           </a>
