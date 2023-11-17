@@ -1,34 +1,101 @@
 @import "variables";
 
 .about-container {
-    min-width: 450px;
-    width: 100vw;
-    height: 100vh;
-    background-color: $background-color;
-    margin-top: 0; 
-    z-index: 300;
-    position: relative;
+  min-width: 450px;
+  background-color: $background-color;
+  margin-top: 0;
+  z-index: 300;
+  position: relative;
 }
 
 .custom-shape-divider-bottom-1699302488 {
-    position: absolute;
-    margin-top: 0; 
-    top: 0;
-    left: 0;
-    width: 150%;
-    overflow: hidden;
-    line-height: 0;
-    fill: $background-color;
-    margin-top: -14%;
+  position: absolute;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  fill: $background-color;
+  margin-top: -10%;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0;
+  margin: 0;
+  padding: 10vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text-section {
+  margin-left: -70%;
+  z-index: 2;
+}
+
+//BUTTON STYLEING//////////////////////////////
+.about-button {
+  padding-top: 20px;
+}
+.avatarHead {
+  position: relative;
+  z-index: -2;
+}
+
+#hand {
+  z-index: -2;
+  position: relative;
+  display: block;
+  width: 9px;
+  height: 30px;
+  background-color: rgb(221, 188, 150);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+#moreButton:hover {
+  transform: scale(1.05);
+}
+
+.starBehindButton1 {
+  position: relative;
+  width: 25px;
+  z-index: -2;
+  display: box;
+  box-shadow: 2px;
+}
+
+.matilda-cut-out {
+    width: 80%;
+    clip-path: circle( 50% at center);
+    background-color: $primary-color;
+    z-index: 2;
+    position: relative;
 }
 
 //////darkmode/////////////////////
 .dark-mode {
-    .about-container {
-        background-color: $background-color-dark;
-    }
-    
-    .custom-shape-divider-bottom-1699302488 {
-        fill: $background-color-dark;
-    }
+  .about-container {
+    background-color: $background-color-dark;
+  }
+
+  .custom-shape-divider-bottom-1699302488 {
+    fill: $background-color-dark;
+  }
+
+  .matilda-cut-out {
+    background-color: $primary-color-dark;
+}
+}
+
+@media (max-width: 1000px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    padding: 5vw; 
+  }
+
+  .about-text-section {
+    margin-left: 0;
+  }
 }

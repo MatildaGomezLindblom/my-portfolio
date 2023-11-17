@@ -48,6 +48,11 @@ p {
   line-height: 30px;
 }
 
+mark {
+  color: $secondary-color;
+  background-color: transparent;
+}
+
 body {
   min-width: 450px;
   margin: 0;
@@ -165,6 +170,7 @@ body {
 .primary-button:hover {
   color: $background-color;
   z-index: 2; 
+  transform: scale(1.06);
 }
 
 .dark-mode {
@@ -179,6 +185,10 @@ body {
   p {
     color: $text-color-dark; // Change text color for dark mode
   }
+
+  mark {
+    color: $secondary-color-dark;
+  }
   
   .secondary-button {
     color: $secondary-color-dark;
@@ -192,6 +202,24 @@ body {
   .secondary-button::before,
   .secondary-button::after {
     background-color: $secondary-color-dark;
+  }
+
+  .primary-button {
+    color: $background-color-dark;
+    background-color: $text-color-dark;
+  }
+  
+  .primary-button:hover {
+    color: $background-color-dark;
+  }
+  
+  .primary-button::before,
+  .primary-button::after {
+    background-color: $secondary-color-dark;
+  }
+  
+  .primary-button:hover {
+    color: $background-color-dark;
   }
 }
 

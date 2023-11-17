@@ -1,9 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { React, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import "../../styles/About.scss";
 import ButtonPrimary from "../ButtonPrimary";
-import { FaArrowRight } from 'react-icons/fa';
-
+import { FaArrowRight } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import logo from "../../assets/logo.png";
+import star from "../../assets/about/buttonStar.svg";
+import MoreButton from "./MoreButton";
+import Me from "../../assets/about/MatildaCutOut.png";
 
 function About() {
   return (
@@ -21,8 +25,16 @@ function About() {
           ></path>
         </svg>
       </div>
-      <Link to="/MoreAboutMe">More About Me</Link>
-      <ButtonPrimary>Mer om mig<FaArrowRight /></ButtonPrimary>
+      <div className="about-grid">
+        <div>
+          <img src={Me} className="matilda-cut-out" alt="Matilda" />
+        </div>
+        <div className="about-text-section">
+          <h2>Hej! Mitt namn är <mark>Matilda Gomez Lindblom</mark></h2>
+          <p>Som civilingenjörsstudent i interaktion och design kombinerar jag mina intressen för skapande och problemlösning med min breda kompetens för att skapa meningsfulla användarupplevelser där användaren står i centrum...</p>
+        <MoreButton></MoreButton>
+        </div>
+      </div>
     </div>
   );
 }
