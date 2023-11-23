@@ -1,0 +1,26 @@
+@import "variables";
+
+.contact-container {
+    min-width: 450px;
+  width: 100vw;
+  height: 100vh;
+    background: linear-gradient(
+    90deg,
+    rgba(255, 209, 209, 1) 0%,
+    rgba(251, 251, 251, 1) 100%
+  );
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 0;
+    padding: 10vw;
+  }
+
+  .contact-me-section {
+    width: 100%;
+    display: block;
+    background-color: $text-color-dark;
+  }

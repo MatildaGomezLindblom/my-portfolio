@@ -5,6 +5,7 @@ import Hero from './components/hero/Hero';
 import About from './components/about/About';
 import MoreAboutMe from './components/about/MoreAboutMe';
 import Contact from './components/contact/Contact';
+import Projects from './components/projects/Projects';
 
 
 import './styles/global.scss';
@@ -32,6 +33,9 @@ function App() {
                 </section>
                 <section id="about">
                   <About />
+                </section>
+                <section id="projects">
+                  <Projects />
                 </section>
                 <section id="contact">
                   <Contact />
