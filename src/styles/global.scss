@@ -131,6 +131,11 @@ body {
   overflow: hidden;
 }
 
+.primary-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 .primary-button:hover {
   color: $background-color;
 }
