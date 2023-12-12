@@ -58,20 +58,6 @@ function Contact() {
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)}>
-          {/* <div class="form-input-container">
-            <div class="did-floating-label-content">
-              <input
-                type="text"
-                {...register("firstName", { required: true })}
-                class="did-floating-input"
-                placeholder=" "
-              />
-              <label for="firstName" class="did-floating-label">
-                Namn
-              </label>
-              {errors.firstName && <span>Detta fält är obligatoriskt</span>}
-            </div>
-          </div> */}
           <div>
             <div>
               <label htmlFor="firstName">Namn</label>

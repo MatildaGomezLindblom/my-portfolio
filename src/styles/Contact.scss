@@ -31,10 +31,10 @@
 .contact-me-section {
   width: 100%;
   display: block;
-  background-color: $text-color-dark;
   padding: 30px;
   height: 550px;
-  box-shadow: 1px 2px 4px$text-color;
+  /* background-color: $background-color;
+  box-shadow: 1px 2px 4px$text-color; */
   max-width: 600px;
 }
 
@@ -67,7 +67,8 @@ textarea{
 }
 
 input:focus, textarea:focus {
-  border: 3px solid $primary-color;
+  border: 3px solid $secondary-color;
+  opacity: 0.5;
   outline:none;
 }
 
@@ -85,6 +86,10 @@ input:focus, textarea:focus {
 .github-icon {
   width: 40px;
   height: 40px;
+  color: $secondary-color;
+}
+
+span {
   color: $secondary-color;
 }
 
