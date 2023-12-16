@@ -1,6 +1,6 @@
-import React from "react";
+import { useRef } from "react";
 import "../../styles/Hero.scss";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Stars from "../../assets/hero/stars.svg";
 import Star1 from "../../assets/hero/star1.svg";
 import Star2 from "../../assets/hero/star2.svg";
@@ -11,6 +11,17 @@ import ButtonSecondary from "../ButtonSecondary";
 
 function Hero({ toggleTheme }) {
   const { isDarkTheme } = useTheme();
+
+  //parallax
+  const ref = useRef();
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   //clouds and star placements
   const cloudPlacements = [
@@ -96,6 +107,7 @@ function Hero({ toggleTheme }) {
   return (
     <div
       className={`hero-container ${isDarkTheme ? "dark-mode" : "light-mode"}`}
+      ref={ref}
     >
       <div className="hero-grid">
         <motion.div
@@ -151,8 +163,8 @@ function Hero({ toggleTheme }) {
           transition={{ duration: 2.5, ease: "easeOut" }}
         />
       </div>
-      <div>{stars}</div>
-      <div>{clouds}</div>
+      <div style={{ x: yBg }}>{stars}</div>
+      <div style={{ x: yBg }}>{clouds}</div>
     </div>
   );
 }
