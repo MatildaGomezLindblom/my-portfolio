@@ -1,6 +1,6 @@
 @import "variables";
 
-.hero-container {
+/* .hero-container {
   min-width: 450px;
   width: 100vw;
   height: 100vh;
@@ -13,6 +13,31 @@
     rgba(255, 209, 209, 1) 0%,
     rgba(251, 251, 251, 1) 100%
   );
+} */
+
+.hero-container {
+  background: linear-gradient(90deg,$primary-color,$primary-color-2);
+  background-size: 400% 400%;
+  animation: gradient_anim 2s ease-in;
+  min-width: 450px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+}
+      
+@keyframes gradient_anim {
+  0% {
+      background-position: 100% 70%;
+  }
+  50% {
+    background-position: 50% 40%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
 }
 
 .hero-grid {
@@ -24,7 +49,7 @@
 }
 
 .sun {
-  z-index: 1;
+  z-index: -1;
   display: inline-block;
   width: 15vw;
   height: 15vw;
@@ -33,12 +58,12 @@
   margin-left: auto;
   background-color: $sun-color;
   box-shadow:
-    inset 0 0 50px #ffab2d,
+    inset 0 0 50px #ffc773,
     /* inner white */ inset 20px 0 80px $sun-color,
-    /* inner left magenta short */ inset -20px 0 80px #d93f52,
+    /* inner left magenta short */ inset -20px 0 80px #f5909c,
     /* inner right cyan short */ inset 20px 0 300px $sun-color,
     /* inner left magenta broad */ inset -20px 0 300px #fbfbfb,
-    /* inner right cyan broad */ 0 0 50px #ff9900,
+    /* inner right cyan broad */ 0 0 50px #ffcd83,
     /* outer white */ -10px 0 80px $sun-color,
     /* outer left magenta */ 10px 0 80px #fbfbfb; /* outer right cyan */
 }

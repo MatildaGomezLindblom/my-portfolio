@@ -5,7 +5,7 @@ import Stars from "../../assets/hero/stars.svg";
 import Star1 from "../../assets/hero/star1.svg";
 import Star2 from "../../assets/hero/star2.svg";
 import Star3 from "../../assets/hero/star3.svg";
-import Cloud from "../../assets/hero/cloud.svg";
+import Cloud from "../../assets/hero/pinkCloud.png";
 import { useTheme } from "../ThemeContext";
 import ButtonSecondary from "../ButtonSecondary";
 
