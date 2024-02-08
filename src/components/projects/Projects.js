@@ -29,7 +29,7 @@ const data = [
     description:
       "Ett digitalt och interaktivt komplement till Knightecs fysiska fotovägg.",
       pills: [ "#UX/UI", "#Figma", "#Användarstudier"],
-    url: "https://draft.spline.design/QmsxVsC5gFhjATtl/scene.splinecode",
+    url: "https://draft.spline.design/DaQZdZYfoCbEBsrg/scene.splinecode",
   },
 ];
 
