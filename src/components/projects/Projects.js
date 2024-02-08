@@ -12,27 +12,25 @@ const data = [
     title: "MemoSphere",
     description:
       "AI driven applikation för att hålla kontakten med nära och kära genom veckovisa inlägg.",
-      pills: ["#Apputveckling", "#UX/UI"],
+      pills: ["#Apputveckling", "#UX/UI", "#React Native"],
     url: "https://draft.spline.design/PqRZgX9zUPXYP5iD/scene.splinecode",
   },
   {
     id: 2,
-    title: "MemoSphere",
+    title: "Hotspot",
     description:
-      "AI driven applikation för att hålla kontakten med nära och kära genom veckovisa inlägg.",
-      pills: ["#Apputveckling", "#UX/UI"],
-    url: "https://draft.spline.design/PqRZgX9zUPXYP5iD/scene.splinecode",
-  },
-  /*{
-    id: 3,
-    text: "Forest",
-    url: "https://draft.spline.design/K3MDvklANI32PQMH/scene.splinecode",
+      "Appen för att spara och dela sina favoritplatser med sina vänner.",
+      pills: ["#Apputveckling", "#UX/UI", "#React Native"],
+    url: "https://draft.spline.design/8ItPHvy9WpNfyv6u/scene.splinecode",
   },
   {
-    id: 4,
-    text: "Vietnam",
-    url: "https://draft.spline.design/K3MDvklANI32PQMH/scene.splinecode",
-  }, */
+    id: 3,
+    title: "Digital fotovägg",
+    description:
+      "Ett digitalt och interaktivt komplement till Knightecs fysiska fotovägg.",
+      pills: [ "#UX/UI", "#Figma", "#Användarstudier"],
+    url: "https://draft.spline.design/QmsxVsC5gFhjATtl/scene.splinecode",
+  },
 ];
 
 function Images({ title, description, url, pills }) {
@@ -44,7 +42,7 @@ function Images({ title, description, url, pills }) {
   const y = useTransform(
     scrollYProgress,
     [0, 0.4, 0.6, 1],
-    [-300, -100,-100, 100],
+    [-400, -50,-50, 100],
     { ease: circOut }
   );
   return (
