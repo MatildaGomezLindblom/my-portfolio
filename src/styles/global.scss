@@ -26,6 +26,7 @@ h2 {
   font-size: 50px;
   color: $text-color;
   font-weight: normal;
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -178,6 +179,25 @@ body {
   transform: scale(1.06);
 }
 
+.pill {
+  border-radius: 100px;
+  color: $text-color;
+  background-color: $primary-color;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-flex;
+  padding: 4px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+}
+
+.pill-container {
+  margin-top: -20;
+  padding-right: 10px;
+}
 .dark-mode {
   // Dark mode styles
   background-color: $background-color-dark;

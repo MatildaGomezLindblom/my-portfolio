@@ -157,7 +157,7 @@
   }
   */
 
-.project-image {
+/* .project-image {
   width: 100%;
   height: auto;
   position: relative;
@@ -179,7 +179,6 @@
 }
 
 .scroll-container {
-  /* This is needed to prevent the image from "jittering" partway through the transition */
   overflow: hidden;
 
   display: grid;
@@ -221,17 +220,13 @@
 .copy h2 {
   font-size: 50px;
   margin-top: 0;
-}
+} */
 
 /* Demo only */
-@media screen and (min-width: 1000px) {
-  .copy h2 {
-    font-size: 70px;
-  }
-}
+
 /* Demo only */
 
-.bottom-shadow {
+/* .bottom-shadow {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%);
   height: 100%;
   width: 100%;
@@ -253,11 +248,76 @@
   left: 0;
   top: 0;
   z-index: 2;
+} */
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: var(--background);
+}
+
+.projects-container {
+  z-index: 10;
+  position: relative;
+  background-color: $background-color;
+  margin-top: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+.project {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: row;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  //scroll-snap-align: center;
+  //perspective: 500px;
+}
+
+.mockup {
+  max-width: 90vw;
+  min-height: 100vh;
+  flex: 50%;
+}
+.project-info {
+  padding-left: 30px;
+  flex: 50%;
+}
+
+.tag-container {
+  display: flex;
+  flex-direction: row;
 }
 
 //////darkmode/////////////////////
 .dark-mode {
   .projects-container {
     background-color: $background-color-dark;
+  }
+}
+
+@media (max-width: 1000px) {
+  .projects-container {
+    //flex-wrap: wrap;
+  }
+
+  .project {
+    flex-direction: column;
+  }
+  .project-info {
+    flex: 100%;
+    margin-top: -200px;
+  }
+
+  .mockup {
+    flex: 100%;
+    margin-left: -90px;
   }
 }

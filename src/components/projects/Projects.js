@@ -1,147 +1,86 @@
-/* import { React, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { motion, useTransform, useScroll, circOut } from "framer-motion";
+import { useRef } from "react";
 import "../../styles/Projects.scss";
+import Spline from "@splinetool/react-spline";
+import Pill from "../Pill";
 import ButtonPrimary from "../ButtonPrimary";
 import { FaArrowRight } from "react-icons/fa";
-import {
-    motion,
-    useScroll,
-    useSpring,
-    useTransform,
-    MotionValue
-  } from "framer-motion";
-import ProjectsCarousel from "./ProjectsCarousel";
 
+const data = [
+  {
+    id: 1,
+    title: "MemoSphere",
+    description:
+      "AI driven applikation för att hålla kontakten med nära och kära genom veckovisa inlägg.",
+      pills: ["#Apputveckling", "#UX/UI"],
+    url: "https://draft.spline.design/PqRZgX9zUPXYP5iD/scene.splinecode",
+  },
+  {
+    id: 2,
+    title: "MemoSphere",
+    description:
+      "AI driven applikation för att hålla kontakten med nära och kära genom veckovisa inlägg.",
+      pills: ["#Apputveckling", "#UX/UI"],
+    url: "https://draft.spline.design/PqRZgX9zUPXYP5iD/scene.splinecode",
+  },
+  /*{
+    id: 3,
+    text: "Forest",
+    url: "https://draft.spline.design/K3MDvklANI32PQMH/scene.splinecode",
+  },
+  {
+    id: 4,
+    text: "Vietnam",
+    url: "https://draft.spline.design/K3MDvklANI32PQMH/scene.splinecode",
+  }, */
+];
 
-function Projects() { 
-    const { scrollYProgress } = useScroll();
-    const scaleX = useSpring(scrollYProgress, {
-      stiffness: 100,
-      damping: 30,
-      restDelta: 0.001
-    });
-  
-    return (
-      <div className="projects-container">
-        <div className="project y mandatory-scroll-snapping" dir="ltr">
-        <img className="carousel-image" src={`https://via.placeholder.com/600`} alt="A London skyscraper" />
-        <img className="carousel-image" src={`https://via.placeholder.com/600`} alt="A London skyscraper" />
-        <img className="carousel-image" src={`https://via.placeholder.com/600`} alt="A London skyscraper" />
-        <img className="carousel-image" src={`https://via.placeholder.com/600`} alt="A London skyscraper" />
-        </div>
-      </div>
-    );
-  }
-
-export default Projects; */
-
-// Photos from https://citizenofnowhe.re/lines-of-the-city
-/* import React, { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-
-function useParallax(value, distance) {
-  return useTransform(value, [0, 1], [-distance, distance]);
-}
-
-function Image({ id }) {
+function Images({ title, description, url, pills }) {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 300);
-
-  return (
-    <section>
-      <div ref={ref}>
-        <img src={`https://via.placeholder.com/600`} alt={`A London skyscraper #00${id}`} />
-      </div>
-      <motion.h2 style={{ y }}>{`#00${id}`}</motion.h2>
-    </section>
-  );
-}
-
-function Projects() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end start", "start end"],
   });
-
+  const y = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.6, 1],
+    [-300, -100,-100, 100],
+    { ease: circOut }
+  );
   return (
-    <div className="hej">
-      {[1, 2, 3, 4, 5].map((image) => (
-        <Image key={image} id={image} />
-      ))}
-      <motion.div className="progress" style={{ scaleX }} />
+    <div className="project">
+      <div ref={ref}>
+        <Spline className="mockup" scene={url} />
+      </div>
+      <motion.div className="project-info" style={{ y }}>
+        <h2>{title}</h2>
+        <div className="tag-container">
+          {pills && pills.map((pill, index) => (
+            <Pill key={index} title={pill} />
+          ))}
+        </div>
+        <p>{description}</p>
+        <ButtonPrimary disabled={false}>Läs mer <FaArrowRight /></ButtonPrimary>
+      </motion.div>
     </div>
   );
 }
 
-export default Projects; */
-
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import "../../styles/Projects.scss";
-import DigitalPhotoWall from "../../assets/projects/DigitalPhotoWallHero.png";
-import Hotspot from "../../assets/projects/HotspotHero.png";
-import Luckan from "../../assets/projects/LuckanHero.png";
-/*
- * Read the blog post here:
- * https://letsbuildui.dev/series/scroll-animations-with-framer-motion/scroll-linked-content-reveal-animation
- */
-function Project() {
-  const containerRef = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end end"],
-  });
-
-  const imageValueY = useTransform(
-    scrollYProgress,
-    [0, 0.82, 1],
-    ["0%", "0%", "0%"]
-  );
-  const imageValueX = useTransform(
-    scrollYProgress,
-    [0, 0.82, 1],
-    ["-100%", "0%", "-100%"]
-  );
-
-  const images = [
-    { id: 1, src: DigitalPhotoWall },
-    { id: 2, src: DigitalPhotoWall },
-    { id: 1, src: DigitalPhotoWall },
-  ];
-
+function Projects() {
   return (
-    <section className="scroll-container" ref={containerRef}>
-        <div className="img-container">
-          <motion.div
-            className="img-inner"
-            style={{ translateX: imageValueX, translateY: imageValueY }}
-          >
-            <img
-              className="project-image"
-              src={DigitalPhotoWall}
-              alt="a green plant"
-            />
-          </motion.div>
-        </div>
-        <div className="copy">
-{/*text hereee*/}
-        </div>
-    </section>
+    <div className="projects-container">
+      {data.map((img) => (
+        <Images
+          className="project-image"
+          key={img.id}
+          description={img.description}
+          title={img.title}
+          url={img.url}
+          pills={img.pills}
+        />
+      ))}
+    </div>
   );
 }
 
-function Projects() {
-  
-    return (
-      <>
-      <Project/>
-      <Project style={{marginTop: "100vh"}}/>
-      <Project/>
-      </>
-    );
-  }
-  export default Projects;
+export default Projects;
