@@ -9,7 +9,7 @@ import Cloud from "../../assets/hero/pinkCloud.png";
 import { useTheme } from "../ThemeContext";
 import ButtonSecondary from "../ButtonSecondary";
 
-function Hero({ toggleTheme }) {
+function Hero({ toggleTheme, onAnimationComplete }) {
   const { isDarkTheme } = useTheme();
 
   //parallax

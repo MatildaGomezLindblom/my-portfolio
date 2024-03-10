@@ -1,12 +1,8 @@
-import { motion, useTransform, useScroll, circOut } from "framer-motion";
-import { useRef } from "react";
+import React, { Suspense } from 'react';
 import "../../styles/Projects.scss";
-import Spline from "@splinetool/react-spline";
-import Pill from "../Pill";
-import ButtonPrimary from "../ButtonPrimary";
-import { FaArrowRight } from "react-icons/fa";
+const Project = React.lazy(() => import('./Project'));
 
-const data = [
+const projectData = [
   {
     id: 1,
     title: "MemoSphere",
@@ -33,50 +29,34 @@ const data = [
   },
 ];
 
-function Images({ title, description, url, pills }) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["end start", "start end"],
-  });
-  const y = useTransform(
-    scrollYProgress,
-    [0, 0.4, 0.6, 1],
-    [-400, -50,-50, 100],
-    { ease: circOut }
-  );
-  return (
-    <div className="project">
-      <div ref={ref}>
-        <Spline className="mockup" scene={url} />
-      </div>
-      <motion.div className="project-info" style={{ y }}>
-        <h2>{title}</h2>
-        <div className="tag-container">
-          {pills && pills.map((pill, index) => (
-            <Pill key={index} title={pill} />
-          ))}
-        </div>
-        <p>{description}</p>
-        <ButtonPrimary disabled={false}>Läs mer <FaArrowRight /></ButtonPrimary>
-      </motion.div>
-    </div>
-  );
-}
+function Projects(doneLoading) {
 
-function Projects() {
+  const projectSum = projectData.map((project)=> (projectSum + project.id));
+
+  const handleDoneLoading = (id) => {
+    doneLoading();
+    console.log('current id', id);
+    const currentSum = currentSum + id;
+    if (currentSum === projectSum) {
+      doneLoading();
+    }
+  };
+
   return (
     <div className="projects-container">
-      {data.map((img) => (
-        <Images
+       <Suspense fallback={<div>Loading...</div>}>
+       {projectData.map((project) => (
+        <Project
           className="project-image"
-          key={img.id}
-          description={img.description}
-          title={img.title}
-          url={img.url}
-          pills={img.pills}
+          key={project.id}
+          description={project.description}
+          title={project.title}
+          url={project.url}
+          pills={project.pills}
+          handleSplineLoad={handleDoneLoading(project.id)}
         />
       ))}
+       </Suspense>
     </div>
   );
 }

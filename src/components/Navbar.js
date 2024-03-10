@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ModeToggler from "./ModeToggler";
+import ModeSwitch from "./ModeSwitch";
 import "../styles/Navbar.scss"; // Create a new stylesheet for Navbar styles
 import logo from "../assets/logo.png";
 
@@ -86,7 +86,7 @@ function Navbar({ toggleTheme }) {
           </a>
         </li>
         <li onClick={removeActive}>
-          <ModeToggler toggleTheme={toggleTheme} />
+          <ModeSwitch toggleTheme={toggleTheme} />
         </li>
       </ul>
       <FaBars className="menu-toggle" onClick={toggleMenu} />

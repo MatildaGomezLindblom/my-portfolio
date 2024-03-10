@@ -1,18 +1,35 @@
-import React from 'react';
+import React, { Suspense, useEffect,useState } from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Hero from './components/hero/Hero';
-import About from './components/about/About';
-import MoreAboutMe from './components/about/MoreAboutMe';
-import Contact from './components/contact/Contact';
-import Projects from './components/projects/Projects';
-
-
+import Loading from './components/Loading';
 import './styles/global.scss';
 import { useTheme } from './components/ThemeContext'; // Import the useTheme hook
+//import Hero from './components/hero/Hero';
+// Lazy load components
+const Navbar = React.lazy(() => import('./components/Navbar'));
+const Hero = React.lazy(() => import('./components/hero/Hero'));
+const About = React.lazy(() => import('./components/about/About'));
+const MoreAboutMe = React.lazy(() => import('./components/about/MoreAboutMe'));
+const Contact = React.lazy(() => import('./components/contact/Contact'));
+const Projects = React.lazy(() => import('./components/projects/Projects'));
 
 function App() {
   const { isDarkTheme, toggleTheme } = useTheme(); // Access the theme and toggleTheme function
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [projectIsLoading, setProjectIsLoading] = useState(true);
+
+/*   useEffect(() => {
+    // Simulate loading delay
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 7000); // Adjust the delay as needed
+  }, []); */
+
+  useEffect(() => {
+    if (!projectIsLoading) {
+      setIsLoading(false);
+    }
+  }, [projectIsLoading]);
 
   return (
     <div className="app-container">
@@ -20,7 +37,6 @@ function App() {
       <div
         className={isDarkTheme ? 'dark-mode' : 'light-mode'}
       >
-        <Navbar toggleTheme={toggleTheme} />
 
         <Routes>
           <Route path="/MoreAboutMe" element={<MoreAboutMe />} />
@@ -31,22 +47,32 @@ function App() {
                 <section id="hero">
                   <Hero toggleTheme={toggleTheme}/>
                 </section>
-                <section id="about">
+                <Suspense fallback={<Loading />}>
+                {!isLoading && (
+                  <>
+                  <Navbar toggleTheme={toggleTheme} />
+                  <section id="about">
                   <About />
                 </section>
                 <section id="projects">
-                  <Projects />
+                  <Projects doneLoading={setProjectIsLoading(false)}/>
                 </section>
                 <section id="contact">
                   <Contact />
                 </section>
+                  </>
+                        )}
+                  {isLoading && ( <>
+                  <Loading/>
+                  </>
+                        )}   
+                        </Suspense>   
               </div>
             }
           />
         </Routes>
       </div>
     </Router>
-
     </div>
   );
 }
