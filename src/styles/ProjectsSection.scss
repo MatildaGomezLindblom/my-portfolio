@@ -1,0 +1,137 @@
+@import "variables";
+
+.projects-container {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 5px; 
+  padding-right: 5px; 
+  position: relative;
+  background-color: $background-color;
+  display: block;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: var(--background);
+}
+.featured-projects {
+  display: grid;
+  z-index: 11;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr);    
+  gap: 5px; 
+  height: 100vh; 
+}
+
+.project {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-1 {
+  background-image: url('../assets/projects/HotspotHeroImage.png');
+}
+
+.project-2 {
+  background-image: url('../assets/projects/HotspotHero.png');
+}
+
+.project-3 {
+  background-image: url('../assets/projects/HotspotHero.png');
+}
+
+.project-4 {
+  background-image: url('../assets/projects/HotspotHero.png');
+}
+
+/* Lägg till en overlay för att göra texten mer läsbar */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Halvgenomskinlig svart overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth fade-in on hover */
+}
+
+/* Show overlay on hover */
+.project:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h4 {
+  color: white;
+  margin: 0;
+  padding-left: 15%;
+  padding-top: 10;
+  padding-right: 15%;
+  text-align: center;
+}
+
+.overlay p {
+  color: white;
+  margin: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: center;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: -30px;
+}
+
+.section-title .line {
+  z-index: 11;
+  flex-grow: 1;
+  height: 2px;
+  background-color: $text-color;
+  margin: 0 15px; 
+}
+
+.section-title h2 {
+  z-index: 11;
+  padding: 0;
+  text-align: center;
+}
+
+.dark-mode {
+  .projects-container {
+    background-color: $background-color-dark;
+  }
+  .section-title .line {
+    background-color: $text-color-dark;
+  }
+}
+
+@media (max-width: 800px) {
+  .featured-projects {
+    display: grid;
+    z-index: 11;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+    gap: 5px; 
+    height: auto; 
+  }
+  .project.in-view .overlay {
+    opacity: 1;
+  }
+  .project {
+    height: 50vh;
+  }
+}
