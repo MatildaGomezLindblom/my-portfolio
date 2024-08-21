@@ -45,6 +45,60 @@
   margin-right: auto;
 }
 
+//alternative navbar
+button {
+  position: relative; 
+  color: $text-color;
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 2px;
+  border: 0;
+  transition: background-color 0.5s, color 0.3s;
+  overflow: hidden;
+}
+
+button:hover {
+  color: $background-color;
+}
+
+button::before,
+button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  bottom: -200%;
+  left: 0;
+  background-color: $text-color;
+  z-index: -1;
+  transition: all 300ms ease-in;
+  border-radius: 40px 40px 0px 0px;
+}
+
+:before {
+  opacity: 0.5;
+}
+
+:after {
+  transition-delay: 0.15s;
+}
+
+
+button:hover::before,
+button:hover::after {
+  bottom: 0; 
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
 @media (max-width: 450px) {
   .menu-toggle {
     width: 30px;

@@ -6,6 +6,7 @@ import About from './components/about/About';
 import MoreAboutMe from './components/about/MoreAboutMe';
 import Contact from './components/contact/Contact';
 import ProjectsSection from './components/projects/ProjectsSection';
+import Hotspot from './components/projects/Hotspot';
 
 
 import './styles/global.scss';
@@ -24,6 +25,7 @@ function App() {
 
         <Routes>
           <Route path="/MoreAboutMe" element={<MoreAboutMe />} />
+          <Route path="/Hotspot" element={<Hotspot />} />
           <Route
             path="/"
             element={

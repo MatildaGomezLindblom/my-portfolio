@@ -69,15 +69,15 @@ function Hero({ toggleTheme, onAnimationComplete }) {
 
   //generate and animate stars
   const stars = [].concat(
-    generateStars(starPlacements, Star1, "1.3vw"),
-    generateStars(starPlacements2, Star2, "1.3vw"),
-    generateStars(starPlacements3, Star3, "0.3vw")
+    generateStars(starPlacements, Star1, "1.3vw", 1),
+    generateStars(starPlacements2, Star2, "1.3vw", 2),
+    generateStars(starPlacements3, Star3, "0.3vw", 3)
   );
 
-  function generateStars(placements, imageSource, starWidth) {
+  function generateStars(placements, imageSource, starWidth, groupIndex) {
     return placements.map((star, index) => (
       <motion.img
-        key={`star-${index}`}
+        key={`star-${groupIndex}-${index}`}
         className="star"
         src={imageSource}
         alt="Star"

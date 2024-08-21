@@ -1,6 +1,11 @@
 import "../../styles/ProjectsSection.scss";
+import { Link } from "react-router-dom";
 
 function ProjectsSection() {
+  //determine if device is touch or not
+  if (!("ontouchstart" in document.documentElement)) {
+    document.documentElement.className += " no-touch";
+  }
 
   return (
     <div class="projects-container">
@@ -11,13 +16,24 @@ function ProjectsSection() {
       </div>
       <div class="featured-projects">
         <div class="project project-1">
-          <div class="overlay">
-            <p>React Native • Användarhantering • UX • Firebase</p>
-            <h4>
-              HOTSPOT - Appen för att spara och dela sina favoritplatser med
-              vänner.
-            </h4>
-          </div>
+          <Link
+            to="/Hotspot"
+            onClick={() => {
+              window.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+              });
+            }}
+          >
+            <div class="overlay">
+              <p>React Native • Användarhantering • UX • Firebase</p>
+              <h4>
+                HOTSPOT - Appen för att spara och dela sina favoritplatser med
+                vänner.
+              </h4>
+            </div>
+          </Link>
         </div>
         <div class="project project-2">
           <div class="overlay">
