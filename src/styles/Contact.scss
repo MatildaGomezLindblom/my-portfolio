@@ -1,7 +1,7 @@
 @import "variables";
 
 .contact-container {
-  min-width: 450px;
+  //min-width: 450px;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -131,6 +131,17 @@ span {
   color: $secondary-color-dark;
 }
 }
+
+@media (max-width: 800px) {
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0;
+    padding: 10vw;
+  }
+}
+
 
 //floating lable css from https://codepen.io/devesh8/pen/MWYEJEP
 /* 

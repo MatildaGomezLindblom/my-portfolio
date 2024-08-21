@@ -115,7 +115,7 @@ function Navbar({ toggleTheme }) {
     }
   };
 
-  return <nav className="navbar-container">{renderNavbarContent()}</nav>;
+  return <nav className="navbar">{renderNavbarContent()}</nav>;
 }
 
 export default Navbar;
