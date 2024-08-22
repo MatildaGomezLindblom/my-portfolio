@@ -248,13 +248,13 @@
   left: 0;
   top: 0;
   z-index: 2;
-} */
-
-::-webkit-scrollbar {
+} 
+  ::-webkit-scrollbar {
   height: 5px;
   width: 5px;
   background: var(--background);
 }
+  */
 
 .projects-container {
   z-index: 10;
