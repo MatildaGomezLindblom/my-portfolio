@@ -2,59 +2,41 @@
 
 .hotspotContainer {
   background-color: $background-color;
-  height: 100vh;
+  display: grid; /* Use CSS Grid */
+  grid-template-rows: 1fr 4fr;
 }
 
-button {
-  position: relative; 
-  color: $text-color;
-  background-color: transparent;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  display: inline-flex;
-  padding: 10px 25px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 2px;
-  border: 0;
-  transition: background-color 0.5s, color 0.3s;
-  overflow: hidden;
+.contentContainer {
+  background-color: $background-color;
+  display: grid; /* Use CSS Grid */
+  grid-template-columns: 1fr 4fr;
+  top: 100vh;
 }
 
-button:hover {
-  color: $background-color;
-}
-
-button::before,
-button::after {
-  content: "";
+.hero {
   position: absolute;
-  width: 100%;
-  height: 200%;
-  bottom: -200%;
+  top: 0;
   left: 0;
-  background-color: $text-color;
-  z-index: -1;
-  transition: all 300ms ease-in;
-  border-radius: 40px 40px 0px 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../assets/projects/HotspotHeroImage.jpg');
 }
 
-:before {
-  opacity: 0.5;
+.heroBackground {
+  background-image: url('../assets/projects/HotspotHeroImage.jpg');
 }
 
-:after {
-  transition-delay: 0.15s;
+.section {
+  height: 500px;
+}
+
+.vertical-navbar {
+  position: sticky;
+  height: 100vh;
+  top: 50px;
 }
 
 
-button:hover::before,
-button:hover::after {
-  bottom: 0; 
-}
-
-button:active {
-  transform: scale(0.95);
-}
+/////////////////////////////////////

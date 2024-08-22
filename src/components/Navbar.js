@@ -110,7 +110,7 @@ function Navbar({ toggleTheme }) {
         );
       default:
         return <div class="goBack">
-        <button onClick={() => navigate(-1)}><FaArrowLeft />Tillbaka</button>
+        <a onClick={() => navigate(-1)}><FaArrowLeft /> TILLBAKA</a>
         </div>;
     }
   };

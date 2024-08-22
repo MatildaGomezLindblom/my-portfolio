@@ -52,14 +52,19 @@ nav {
 }
 
 //alternative navbar
+.goBack {
+  padding: 10px 20px;
+}
+
+/*button
 button {
   position: relative; 
   color: $text-color;
   background-color: transparent;
-  font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  font-weight: bold;
+  font-family: $font-heading;
   display: inline-flex;
+  padding: 10px 25px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -103,7 +108,7 @@ button:hover::after {
 
 button:active {
   transform: scale(0.95);
-}
+}*/
 
 @media (max-width: 530px) {
   .menu-toggle {
