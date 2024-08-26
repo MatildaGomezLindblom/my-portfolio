@@ -2,30 +2,19 @@
 
 .hotspotContainer {
   background-color: $background-color;
-  display: grid; /* Use CSS Grid */
+  display: grid; 
   grid-template-rows: 1fr 4fr;
+  margin-top: -41px;
+  scroll-snap-type: y mandatory;
 }
 
 .contentContainer {
   background-color: $background-color;
-  display: grid; /* Use CSS Grid */
+  display: grid; 
   grid-template-columns: 1fr 4fr;
-  top: 100vh;
-}
-
-.hero {
-  position: absolute;
   top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-image: url('../assets/projects/HotspotHeroImage.jpg');
-}
-
-.heroBackground {
-  background-image: url('../assets/projects/HotspotHeroImage.jpg');
+  z-index: 4; 
+  scroll-snap-align: start;
 }
 
 .section {

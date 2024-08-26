@@ -55,7 +55,7 @@ function ProjectsSection() {
     <div className="projects-container">
       <div className="section-title">
         <div className="line"></div>
-        <h3>Utvalda projekt</h3>
+        <h3 className="title">Utvalda projekt</h3>
         <div className="line"></div>
       </div>
       <div className="featured-projects">

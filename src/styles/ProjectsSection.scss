@@ -13,6 +13,10 @@
   background-image: url('../assets/projects/HotspotHeroImage.jpg');
 }
 
+h3 {
+  color: $text-color;
+}
+
 .projects-container {
   z-index: 100;
   display: flex;
@@ -101,6 +105,10 @@
   text-align: center;
 }
 
+.title {
+  white-space: nowrap;
+}
+
 .section-title {
   display: flex;
   align-items: center;
@@ -114,6 +122,7 @@
   height: 2px;
   background-color: $text-color;
   margin: 0 15px; 
+  width: 100%;
 }
 
 .section-title h2 {

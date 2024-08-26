@@ -1,20 +1,5 @@
 @import "variables";
 
-/* .hero-container {
-  min-width: 450px;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 209, 209, 1) 0%,
-    rgba(251, 251, 251, 1) 100%
-  );
-} */
-
 .hero-container {
   background: linear-gradient(90deg,$primary-color,$primary-color-2);
   background-size: 400% 400%;
@@ -47,6 +32,10 @@
   gap: 1rem;
   margin: 0;
   padding: 10vw;
+}
+
+h2 {
+  padding-bottom: 20px;
 }
 
 .sun {
