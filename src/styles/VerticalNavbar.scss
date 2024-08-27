@@ -31,14 +31,15 @@
   .verticalNavbarContainer a:hover {
     background-color: $primary-color;
   }
-  
-  .section {
-    height: 100vh;
-    padding: 50px;
-    margin-top: 10px;
+
+  @media (max-width: 500px) {
+    #section1 {
+      p,
+      h3,
+      h2,
+      h4 {
+        padding-left: 0;
+      }
+    }
   }
   
-  #section1 { background-color: #ffdddd; }
-  #section2 { background-color: #ddffdd; }
-  #section3 { background-color: #ddddff; }
-  #section4 { background-color: #ffffdd; }

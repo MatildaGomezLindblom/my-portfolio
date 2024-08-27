@@ -2,7 +2,7 @@
 
 .hotspotContainer {
   background-color: $background-color;
-  display: grid; 
+  display: grid;
   grid-template-rows: 1fr 4fr;
   margin-top: -41px;
   scroll-snap-type: y mandatory;
@@ -10,11 +10,33 @@
 
 .contentContainer {
   background-color: $background-color;
-  display: grid; 
+  display: grid;
   grid-template-columns: 1fr 4fr;
   top: 0;
-  z-index: 4; 
+  z-index: 4;
   scroll-snap-align: start;
+
+  h3 {
+    padding-left: 5%;
+  }
+}
+
+li {
+  font-family: $font-text;
+  font-size: 14px;
+  color: $text-color;
+  line-height: 22px;
+}
+
+ul {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.list-title {
+  font-weight: bold;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .section {
@@ -27,5 +49,104 @@
   top: 50px;
 }
 
+.project-section-title {
+  color: $secondary-color;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  padding-left: 5%;
+}
+
+.project-section-subtitle {
+  padding-top: 0;
+  margin-top: 0;
+  padding-left: 5%;
+}
 
 /////////////////////////////////////
+///
+#section1 {
+  padding-top: 80px;
+  background-color: $background-color;
+  height: auto;
+
+  .design-overview {
+    background-color: $primary-color;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .design-overview-content {
+    padding: 80px 5%;
+  }
+
+  p {
+    padding-left: 5%;
+    padding-bottom: 20px;
+  }
+
+  #idea {
+    width: 14%;
+    padding-bottom: 20%;
+  }
+
+  #arrowDownRight {
+    width: 8%;
+    padding-bottom: 10%;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  #hotspotLoFiPreview {
+    width: 35%;
+  }
+
+  #arrowUpRight {
+    width: 8%;
+    padding-bottom: 8%;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  #hotspotHiFiPreview {
+    width: 35%;
+  }
+
+  .section-section {
+    padding-top: 100px;
+  }
+
+  .hotspot-testing-results {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hotspot-testing-results img {
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .carousel-container {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 1000px) {
+  #section1 {
+    .hotspot-testing-results {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #section1 {
+    p,
+    h3,
+    h2,
+    h4 {
+      padding-left: 0;
+    }
+  }
+}
