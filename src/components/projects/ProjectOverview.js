@@ -32,7 +32,12 @@ function ProjectOverview({ projectData }) {
   //change styles on scroll
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.5]); // Scales down the div
-  const y = useTransform(scrollYProgress, [0, 0.1, 1], [0, -100, 300]); // Moves the div upwards to simulate rolling back into the background
+  const y = useTransform(scrollYProgress, [0, 0.1, 1], [0, -200, 100]); // Moves the div upwards to simulate rolling back into the background
+
+  function scrollToSection(id) {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: "smooth" });
+  }
 
   return (
     <div className="heroContainer">
@@ -61,7 +66,14 @@ function ProjectOverview({ projectData }) {
               </div>
             ))}
             <div>
-              <ButtonSecondary>{projectData.buttonText}</ButtonSecondary>
+              <ButtonSecondary
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("results");
+                }}
+              >
+                {projectData.buttonText}
+              </ButtonSecondary>
             </div>
           </div>
           <div className="line"></div>

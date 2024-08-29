@@ -39,8 +39,17 @@ function VerticalNavbar({ sections }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   return (
     <div className="verticalNavbarContainer">
+      <div className="verticalNavbarContainer-top"></div>
+      <a onClick={(e) => {
+          e.preventDefault();
+          scrollToTop();
+        }} >ÖVERSIKT</a>
       {sections.map((section, index) => (
         <a
         key={index} href={`/#${section.id}`} id={`nav-${section.id}`}

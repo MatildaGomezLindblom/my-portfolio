@@ -13,6 +13,10 @@
     height: 100vh;
     background-color: $background-color;
   }
+
+  .verticalNavbarContainer-top {
+    height: 25px;
+  }
   
   .verticalNavbarContainer a {
     padding: 25px 15px;
@@ -20,7 +24,7 @@
     text-decoration: none;
     color: $text-color;
     margin: 5px 0;
-    border-radius: 5px;
+    border-radius: 2px;
     transition: background-color 0.3s;
   }
   
@@ -33,13 +37,9 @@
   }
 
   @media (max-width: 500px) {
-    #section1 {
-      p,
-      h3,
-      h2,
-      h4 {
-        padding-left: 0;
-      }
+    .verticalNavbarContainer {
+      display: none;
+      max-width: 0;
     }
   }
   
