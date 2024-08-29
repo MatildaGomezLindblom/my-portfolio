@@ -101,35 +101,7 @@ span {
       rgba(41, 47, 95, 1) 100%
     );
   }
-  .custom-shape-divider-top-1701897315 {
-    fill: $background-color-dark;
-  }
 
-  input,
-textarea {
-  box-shadow: inset 0px 2px 4px$background-color-dark;
-  border: 1px solid  $background-color-dark;
-  font-family: $font-text;
-  //color: $text-color-dark;
-  //background: $primary-color-dark;
-}
-
-input:focus, textarea:focus {
-  border: 3px solid $secondary-color-dark;
-  outline: none;
-}
-
-.form-section-title {
-  color: $secondary-color-dark;
-}
-
-.github-icon {
-  color: $secondary-color-dark;
-}
-
-span {
-  color: $secondary-color-dark;
-}
 }
 
 @media (max-width: 800px) {

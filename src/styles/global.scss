@@ -213,55 +213,7 @@ body {
   width: 100vw;
 }
 
-.dark-mode {
-  // Dark mode styles
-  background-color: $background-color-dark;
-  color: $text-color-dark;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  p {
-    color: $text-color-dark; // Change text color for dark mode
-  }
-
-  mark {
-    color: $secondary-color-dark;
-  }
-  
-  .secondary-button {
-    color: $secondary-color-dark;
-    border: 2px solid $secondary-color-dark;
-  }
-  
-  .secondary-button:hover {
-    color: $background-color-dark;
-  }
-  
-  .secondary-button::before,
-  .secondary-button::after {
-    background-color: $secondary-color-dark;
-  }
-
-  .primary-button {
-    color: $background-color-dark;
-    background-color: $text-color-dark;
-  }
-  
-  .primary-button:hover {
-    color: $background-color-dark;
-  }
-  
-  .primary-button::before,
-  .primary-button::after {
-    background-color: $secondary-color-dark;
-  }
-  
-  .primary-button:hover {
-    color: $background-color-dark;
-  }
-}
 
 .light-mode {
   // Light mode styles

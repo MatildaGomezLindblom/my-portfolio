@@ -1,4 +1,4 @@
-@import "variables";
+@import "./variables.scss";
 
 .about-container {
   //min-width: 450px;
@@ -76,19 +76,7 @@
 }
 
 //////darkmode/////////////////////
-.dark-mode {
-  .about-container {
-    background-color: $background-color-dark;
-  }
 
-  .custom-shape-divider-bottom-1699302488 {
-    fill: $background-color-dark;
-  }
-
-  .matilda-cut-out {
-    background-color: $primary-color-dark;
-}
-}
 
 @media (max-width: 1000px) {
   .about-grid {

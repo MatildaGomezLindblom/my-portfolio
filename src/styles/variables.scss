@@ -1,38 +1,46 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Sansita");
 
-//theme
-$dark-theme: var(--theme, true) !default;
-//colors
-$primary-color: #FFDEDE;
-$primary-color-2: #CEF0FF;
-$text-color: #141736;
-$secondary-color: #d93f52;
-$background-color: #fbfbfb;
-$sun-color: #fff385;
+:root {
+  --primary-color: #FFDEDE;
+  --primary-color-2: #CEF0FF;
+  --text-color: #141736;
+  --secondary-color: #d93f52;
+  --background-color: #fbfbfb;
+  --sun-color: #fff385;
+  --moon-color: #CED0E8;
 
-$primary-color-dark: #463B75;
-$primary-color-2-dark: #8F55AB;
-$text-color-dark: #fbfbfb;
-$secondary-color-dark: #fa89aa;
-$background-color-dark: #16171E;
-$moon-color: #CED0E8;
+  --font-text: "Montserrat", sans-serif;
+  --font-heading: "Sansita", sans-serif;
 
-//text
-$font-text: "Montserrat", sans-serif;
-$font-heading: "Sansita", sans-serif;
+  --space-m: 100px;
+}
 
-//space
-$space-m: 100px;
+.dark-mode {
+  --primary-color: #463B75;
+  --primary-color-2: #8F55AB;
+  --text-color: #fbfbfb;
+  --secondary-color: #fa89aa;
+  --background-color: #16171E;
+  --moon-color: #CED0E8;
+}
 
-/* //colors
-$primary-color: #ffd1d1;
-$text-color: #141736;
-$secondary-color: #d93f52;
-$background-color: #fbfbfb;
-$sun-color: #FFDA58;
+.light-mode {
+  --primary-color: #FFDEDE;
+  --primary-color-2: #CEF0FF;
+  --text-color: #141736;
+  --secondary-color: #d93f52;
+  --background-color: #fbfbfb;
+  --sun-color: #fff385;
+}
 
-$primary-color-dark: #292e5a;
-$text-color-dark: #fbfbfb;
-$secondary-color-dark: #fa89aa;
-$background-color-dark: #16171E;
-$moon-color: #CED0E8; */
+$primary-color: var(--primary-color);
+$primary-color-2: var(--primary-color-2);
+$text-color: var(--text-color);
+$secondary-color: var(--secondary-color);
+$background-color: var(--background-color);
+$sun-color: var(--sun-color);
+$moon-color: var(--moon-color);
+
+$font-text: var(--font-text);
+$font-heading: var(--font-heading);
+$space-m: var(--space-m);

@@ -147,27 +147,7 @@ button:active {
     margin: 16px 0;
   }
 
-  .dark-mode {
-    .navbar-list {
-      background-color: $background-color-dark;
-    }
-  }
+ 
 }
 
-.dark-mode {
-  .navbar-list a {
-    font-weight: normal;
-    color: $text-color-dark;
 
-    &:hover {
-      color: $secondary-color-dark;
-    }
-  }
-  .menu-toggle {
-    color: $text-color-dark;
-
-    &:hover {
-      color: $secondary-color-dark;
-    }
-  }
-}

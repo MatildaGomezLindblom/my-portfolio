@@ -131,14 +131,7 @@ h3 {
   text-align: center;
 }
 
-.dark-mode {
-  .projects-container {
-    background-color: $background-color-dark;
-  }
-  .section-title .line {
-    background-color: $text-color-dark;
-  }
-}
+
 
 @media (max-width: 800px) {
   .featured-projects {
