@@ -116,7 +116,7 @@
     }
   
     .side {
-      display: flex;
+      display: none; //removes section on small screens, not optimal 
       flex-direction: column;
       justify-content: space-between;
       margin-bottom: 0;
