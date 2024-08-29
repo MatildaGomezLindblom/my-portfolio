@@ -35,6 +35,10 @@ function Navbar({ toggleTheme }) {
     console.log(location.pathname); // Log the current path
   }, [location]);
 
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   // Render content based on the current route
   const renderNavbarContent = () => {
     switch (currentPath) {
@@ -47,7 +51,7 @@ function Navbar({ toggleTheme }) {
               href="/#hero"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection("hero");
+                scrollToTop();
               }}
             >
               <motion.div
