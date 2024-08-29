@@ -20,6 +20,10 @@
     padding-left: 5%;
     padding-right: 5%;
   }
+
+  h4 {
+    padding-top: 10px;
+  }
 }
 
 li {
@@ -234,4 +238,44 @@ img {
   }
 }
 
+@media (min-width: 1800px) {
+
+  .title {
+    padding-left: 10vw !important;
+  }
+
+  #section1, #section2, #results, #section4 {
+    h2, h3, h4, p, ul, a {
+      padding-left: 10vw !important;
+      padding-right: 10vw !important;
+    }
+  
+    .design-overview-content {
+      padding: 80px 10vw!important;
+    }
+  
+    .hotspot-storyboard,
+    .mooadboard-graphicprofile-container,
+    .hotspotHiFi {
+      padding-left: 10vw!important;
+      padding-right: 10vw!important;
+    }
+  
+    .hotspot-testing-results {
+      padding-right: 10vw!important;
+      padding-left: 10vw!important;
+    }
+  
+    iframe {
+      padding-left: 10vw!important;
+      padding-right: 10vw!important;
+    }
+  
+    .space {
+      margin-left: 10vw!important;
+      margin-right: 10vw!important;
+    }
+  }
+  
+}
 }

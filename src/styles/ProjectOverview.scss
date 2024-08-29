@@ -28,122 +28,124 @@
   background-size: cover;
   background-position: center;
   background-image: url("../assets/projects/HotspotHeroImage.jpg");
-}
 
-.heroBackground {
-  background-image: url("../assets/projects/HotspotHeroImage.jpg");
-}
-
-.line {
-  width: 4px;
-  background-color: $text-color;
-  margin: 20px 0;
-  opacity: 0.2;
-}
-
-.overviewSection {
-  padding: 40px;
-}
-
-.projectOverview h2 {
-  padding-bottom: 0;
-  margin-bottom: 0;
-  padding-top: 0;
-  margin-top: 0;
-}
-
-.projectOverview h3 {
-  margin-bottom: 0;
-  color: $secondary-color;
-}
-
-.projectOverview h4 {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.projectOverview p {
-  margin-top: 0;
-  padding-top: 8px;
-}
-
-.projectOverview ul {
-  margin-top: 0;
-  padding-top: 8px;
-}
-
-.projectOverview li {
-  font-family: $font-text;
-  font-size: 14px;
-  color: $text-color;
-  line-height: 22px;
-}
-
-@media (max-width: 1000px) {
-  .projectOverview {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .line {
-    height: 3px;
-    width: 100%;
-    background-color: $text-color;
-    margin: 20px 0;
-    opacity: 0.2;
-  }
-
-  .side {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0;
-    padding: 0px 20px;
-    width: 100%;
-  }
-}
-
-@media (max-width: 450px) {
-  .projectOverview {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .line {
-    height: 3px;
-    width: 100%;
-    background-color: $text-color;
-    margin: 20px 0;
-    opacity: 0.2;
-  }
-
-  .side {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 0;
-    padding: 0px 20px;
-    width: 100%;
-  }
-}
-
-@media (max-width: 1000px) {
-
-  .heroContainer {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    z-index: 4;
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-    position: sticky;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+  .heroBackground {
     background-image: url("../assets/projects/HotspotHeroImage.jpg");
   }
+  
+  .line {
+    width: 4px;
+    background-color: $text-color;
+    margin: 20px 0;
+    opacity: 0.2;
+  }
+  
+  .overviewSection {
+    padding: 40px;
+  }
+  
+  .projectOverview h2 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  
+  .projectOverview h3 {
+    margin-bottom: 0;
+    color: $secondary-color;
+  }
+  
+  .projectOverview h4 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  .projectOverview p {
+    margin-top: 0;
+    padding-top: 8px;
+  }
+  
+  .projectOverview ul {
+    margin-top: 0;
+    padding-top: 8px;
+  }
+  
+  .projectOverview li {
+    font-family: $font-text;
+    font-size: 14px;
+    color: $text-color;
+    line-height: 22px;
+  }
+  
+  @media (max-width: 1000px) {
+    .projectOverview {
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .line {
+      height: 3px;
+      width: 100%;
+      background-color: $text-color;
+      margin: 20px 0;
+      opacity: 0.2;
+    }
+  
+    .side {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
+      padding: 0px 20px;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .projectOverview {
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .line {
+      height: 3px;
+      width: 100%;
+      background-color: $text-color;
+      margin: 20px 0;
+      opacity: 0.2;
+    }
+  
+    .side {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 0;
+      padding: 0px 20px;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+  
+    .heroContainer {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      z-index: 4;
+      position: absolute;
+      bottom: 0;
+      width: 100vw;
+      position: sticky;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-image: url("../assets/projects/HotspotHeroImage.jpg");
+    }
+  }
+  
 }
+
