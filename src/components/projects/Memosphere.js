@@ -1,55 +1,73 @@
-import "../../styles/Hotspot.scss";
+import "../../styles/Memosphere.scss";
 import { useLayoutEffect } from "react";
 import VerticalNavbar from "./VerticalNavbar";
 import ProjectOverview from "./ProjectOverview";
+import memospherePriorities from "../../assets/projects/Memosphere/MemospherePriorities.png";
 import arrowUpRight from "../../assets/projects/Hotspot/arrowUpRight.png";
 import arrowDownRight from "../../assets/projects/Hotspot/arrowDownRight.png";
 import idea from "../../assets/projects/Hotspot/Idea.png";
-import hotspotHiFiPreview from "../../assets/projects/Hotspot/HotspotHiFiPreview.png";
-import hotspotLoFiPreview from "../../assets/projects/Hotspot/HotspotLoFiPreview.png";
+import HiFiExampleMemosphere from "../../assets/projects/Memosphere/HiFiExampleMemosphere.png";
+import loFiExampleMemosphere from "../../assets/projects/Memosphere/loFiExampleMemosphere.png";
+import LoFiSketchMemosphere from "../../assets/projects/Memosphere/LoFiSketchMemosphere.png";
+import memosphereVersion2 from "../../assets/projects/Memosphere/memosphereVersion2.png";
+import memosphereVersion3 from "../../assets/projects/Memosphere/memosphereVersion3.png";
+import memosphereVersion1 from "../../assets/projects/Memosphere/memosphereVersion1.png";
+import memosphereVersion4 from "../../assets/projects/Memosphere/memosphereVersion4.png";
+
+import memosphereHiFi1 from "../../assets/projects/Memosphere/memosphereHiFi1.png";
+import memosphereHiFi2 from "../../assets/projects/Memosphere/memosphereHiFi2.png";
+import memosphereHiFi3 from "../../assets/projects/Memosphere/memosphereHiFi3.png";
+import memosphereHiFi4 from "../../assets/projects/Memosphere/memosphereHiFi4.png";
+import memosphereHiFi5 from "../../assets/projects/Memosphere/memosphereHiFi5.png";
+import memosphereHiFi6 from "../../assets/projects/Memosphere/memosphereHiFi6.png";
+import memosphereHiFi7 from "../../assets/projects/Memosphere/memosphereHiFi7.png";
+import memosphereHiFi8 from "../../assets/projects/Memosphere/memosphereHiFi8.png";
+import memosphereHiFi9 from "../../assets/projects/Memosphere/memosphereHiFi9.png";
+import memosphereHiFi10 from "../../assets/projects/Memosphere/memosphereHiFi10.png";
+import memosphereHiFi11 from "../../assets/projects/Memosphere/memosphereHiFi11.png";
+import memosphereHiFi12 from "../../assets/projects/Memosphere/memosphereHiFi12.png";
+import memosphereHiFi13 from "../../assets/projects/Memosphere/memosphereHiFi13.png";
+import memosphereHiFi14 from "../../assets/projects/Memosphere/memosphereHiFi14.png";
+
+// import memosphereStoryboard from "../../assets/projects/Memosphere/memosphereStoryboard.png";
+import memosphereMoodboard from "../../assets/projects/Memosphere/memosphereMoodboard.png";
+import memosphereGraphicProfile from "../../assets/projects/Memosphere/memosphereGraphicalProfile.png";
+// import memosphereHiFi from "../../assets/projects/Memosphere/memosphereHiFi.png";
+// import memosphereDatabase from "../../assets/projects/Memosphere/memosphereDatabase.png";
 import ImageCarousel from "./Carousel";
-import hotspotVersion1 from "../../assets/projects/Hotspot/hotspotVersion1.png";
-import hotspotVersion2 from "../../assets/projects/Hotspot/hotspotVersion2.png";
-import hotspotVersion3 from "../../assets/projects/Hotspot/hotspotVersion3.png";
-import hotspotFinalLoFi from "../../assets/projects/Hotspot/hotspotFinalLoFi.png";
-import hotspotStoryboard from "../../assets/projects/Hotspot/hotspotStoryboard.png";
-import hotspotMoodboard from "../../assets/projects/Hotspot/hotspotMoodboard.png";
-import hotspotGraphicProfile from "../../assets/projects/Hotspot/hotspotGraphicProfile.png";
-import hotspotHiFi from "../../assets/projects/Hotspot/hotspotHiFi.png";
-import hotspotDatabase from "../../assets/projects/Hotspot/hotspotDatabase.png";
 import { FaGithub } from "react-icons/fa";
 
-function Hotspot() {
+function Memosphere() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   });
 
   const projectData = {
-    title: "Hotspot",
-    subtitle: "Appen för att spara och dela sina favoritställen.",
+    title: "Memosphere",
+    subtitle: "Håll kontakt med nära och kära med hjälp av AI.",
     sections: [
       {
         heading: "Utmaning",
-        text: "I projekt designa och utveckla en interaktiv prototyp av en mobilapplikation, med extra fokus på tillgänglighet. Vi valde att lösa problemet med att hitta smultronställen på ett smidigt och pålitligt sätt.",
+        text: "Designa och utveckla en mobil applikation med hjälp av någon typ av ny teknik på temat: “Ensure that family, friends & professionals who care for seniors receive the support they need?”.",
       },
       {
         heading: "Lösning",
-        text: "En app med användarhantering och integrerad karta där man skapa pins för sina favoritplatser med kommentarer som delas mellan använarens vänner.",
+        text: "En AI driven mobilapplikation som ska stärka relationen mellan äldre och deras nära och kära, genom att uppmuntra till veckovis kontakt där man delar med sig om sin vecka.",
       },
     ],
     buttonText: "Hoppa till resultatet",
     additionalInfo: [
       {
         heading: "Kontext",
-        text: "Gruppprojekt 2023 i kursen Prototyputveckling för mobila applikationer.",
+        text: "Gruppprojekt 2023 i kursen Innovativa mobila tjänster och system.",
       },
       {
         heading: "Resurser",
-        text: "5 veckor halvtid i grupp om 5 personer.",
+        text: "5 veckor 30 % i grupp om 6 personer, handledning av Daresay.",
       },
       {
         heading: "Vektyg",
-        text: "Figma, VS Code, React Native.",
+        text: "Figma, VS Code, React Native, OpenAI, Firestore.",
       },
     ],
     role: {
@@ -57,75 +75,124 @@ function Hotspot() {
       tasks: [
         "UX/UI design",
         "Användartester av prototyper",
-        "Designa och sätta upp databas (användare, vänner och pins)",
+        "Designa och sätta upp databas",
         "Service layer till databasen",
-        "Vännersidan",
-        "Sökfunktion för vänner",
+        "Publiseringsflödet",
+        "Research om OpenAI",
       ],
     },
   };
 
   const images = [
     {
-      src: hotspotVersion1,
+      src: memosphereVersion1,
       legend:
-        "I version 1 har funktionen “lägg till pin” en egen knapp i navbaren, vännersidan ligger i profilsidan.",
+        "I version 1 flyter användare runt fritt på hemskärmen i en rymdsetting, likt i spelet Among us. När man skapar en veckouppdatering får man 3 förlag för inspiration.",
     },
     {
-      src: hotspotVersion2,
+      src: memosphereVersion2,
       legend:
-        "I version 2 är lägg till pin en flytande knapp vilket ger plats för vänner i navbaren.",
+        "I version 2 står användare utspridda på hemskärmen och en personligt genererad fråga ställs till användaren i veckouppdateringen.",
     },
     {
-      src: hotspotVersion3,
+      src: memosphereVersion3,
       legend:
-        "Version 3 har en navbar som ändrar funktionalitet beroende på vilken sida användaren befinner sig på.",
+        "Version 3 har alla användare ett eget hus där veckouppdateringarna visas upp.",
     },
+    {
+      src: memosphereVersion4,
+      legend:
+        "Version 4 kan man själv välja kläder till sin användare som visas upp likt nintendos Mii's på hemskärmen.",
+    },
+  ];
+
+  const hiFiImages = [
+    memosphereHiFi1,
+    memosphereHiFi2,
+    memosphereHiFi3,
+    memosphereHiFi4,
+    memosphereHiFi5,
+    memosphereHiFi6,
+    memosphereHiFi7,
+    memosphereHiFi8,
+    memosphereHiFi9,
+    memosphereHiFi10,
+    memosphereHiFi11,
+    memosphereHiFi12,
+    memosphereHiFi13,
+    memosphereHiFi14,
   ];
 
   const sections = [
     {
       id: "section1",
       title: "DESIGN",
-      subtitle: "Från idé till testad hi-fi i Figma på en vecka.",
+      subtitle: "Från idé till design, riktigt snabbt.",
       content: (
         <div>
           <div>
             <p>
-              Tanken var att skapa en applikation som låter användaren pinna
-              platser på kartan, både för sin egen skull, men även för att skapa
-              ett rekommendationssystem för nära och kära.
+              Vi ville gärna använda oss av AI vilket ledde oss till idén om att
+              skapa en applikation där man delar med sig om sin vecka med nära
+              och kära. Varje vecka får användaren lägga in en bild från veckan
+              som gått, eller generera en med AI utifrån text. Därefter kommer
+              applikationen använda sig av openAIs (vid denna tid nya funktion)
+              Vision samt en databas med frågor för att generera unika frågor
+              för användaren att besvara. Detta gör varje veckosummering unik
+              och intressant. 
+              <br/>
+              <br/>
+              I applikationen får man se sina vänner i en
+              innovativ miljö där man istället för att se en lista av vänner,
+              får se sina vänners karaktärer på en interaktiv canvas. Detta ska
+              ge en unik och lekfull touch. Har kan man alltså navigera sig
+              mellan sin egna profil och andras för att se deras
+              veckosummeringar. 
+              <br/>
+              <br/>
+              Vi hade även en tanke om att få in annan data
+              från användarens enhet, exempelvis hälsodata, för att kunna ställa
+              mer personliga frågor om detta.
             </p>
+            <img
+              className="memosphere-storyboard"
+              src={memospherePriorities}
+              alt="functionality prioritized under must haves, want to haves and nice to haves."
+            ></img>
             <div className="design-overview">
               <div className="design-overview-content">
                 <img id="idea" src={idea}></img>
                 <img id="arrowDownRight" src={arrowDownRight}></img>
-                <img id="hotspotLoFiPreview" src={hotspotLoFiPreview}></img>
+                <img
+                  id="memosphereLoFiPreview"
+                  src={loFiExampleMemosphere}
+                ></img>
                 <img id="arrowUpRight" src={arrowUpRight}></img>
-                <img id="hotspotHiFiPreview" src={hotspotHiFiPreview}></img>
+                <img
+                  id="memosphereHiFiPreview"
+                  src={HiFiExampleMemosphere}
+                ></img>
               </div>
             </div>
           </div>
           <div className="section-section">
-            <h3>Storyboard</h3>
-            <p>För att visualisera användarresan.</p>
+            <h3>Lo-fi skiss</h3>
+            <p>
+              För att bestämma en ungefärlig layout för appen gjordes en skiss
+              gemensamt.
+            </p>
             <img
-              className="hotspot-storyboard"
-              src={hotspotStoryboard}
-              alt="Storyboard showing Emilia who goes to a new city and uses the app Hotspot to find restaurant recomendations."
+              className="memosphere-storyboard"
+              src={LoFiSketchMemosphere}
+              alt="Lo-fi sketch with a few rough pages and some text and arrows."
             ></img>
           </div>
           <div className="section-section">
-            <h3>Lo-fi</h3>
+            <h3>Mid-fi</h3>
             <p>
-              Vi visste att vi behövde en karta med sök- och
-              filtreringsfunktion, skapandet och uppvisandet av pins, profiler,
-              och funktionalitet för att logga in och ut samt hantera vänner.
-              Utifrån detta skapades en lo-fi prototyp i Figma. Den största
-              utmaningen var att lista ut vart alla dessa komponenter skulle
-              vara placerade för att navigeringen skulle bli så intuitiv som
-              möjligt. Därför gjordes 3 versioner som sedan testades på 6
-              användare.
+              När vi hade en gemensam bild av vad som behövdes fick alla göra
+              ett förslag var. Vissa valde att göra skisser, andra wireframes
+              eller en mid-fi.
             </p>
             <div>
               <ImageCarousel
@@ -134,66 +201,40 @@ function Hotspot() {
               ></ImageCarousel>
             </div>
           </div>
-          <div className="section-section hotspot-testing-results">
-            <div>
-              <h3>Resultat av testning</h3>
-              <p>
-                Testningen visade att det inte uppskattades när ikonen i
-                navbaren ändrades beroende på vilken sida man var på. Därför var
-                version 1 och 2 favoriterna. Vi valde att fortsätta med version
-                1 då navigationen liknande andra populära appar såsom instagram,
-                med en del justeringar efter feedback från testningen.{" "}
-              </p>
-              <p className="list-title">Ändringar som gjordes var följande:</p>
-              <ul>
-                <li>
-                  Endast en karta istället för seperata för mina pins och
-                  vänners pins.
-                </li>
-                <li>Inställningar i högra hörnet i profilen.</li>
-                <li>
-                  Preview på vänner i profilen, istället för knappen endast.
-                </li>
-              </ul>
-            </div>
-            <div>
-              <img
-                src={hotspotFinalLoFi}
-                alt="finished lo-fi-proptotype after testing with friends under the users profile."
-              ></img>
-            </div>
-          </div>
           <div className="section-section">
             <h3>Moodboard och grafisk profil</h3>
             <p>
-              Då vår applikation skulle innehålla en karta med pins samt många
-              bilder valde vi att hålla oss till få färger och ett ljust tema.
-              Vi valde en nedtonad röd för framhävda element såsom knappar, samt
-              en beige-gul som komplement för att kunna skapa en snygg gradient.
+              Vi gick igenom alla förslag tillsammans och kom fram till att gå
+              vidare med rymdidén i version 1 i grunden. Vi hade många liknande
+              idéer som tillsammans kom att inspirera den slutgiltiga designen.
             </p>
             <div className="mooadboard-graphicprofile-container">
               <img
-                src={hotspotMoodboard}
-                alt="Moodboard containing warm images of graphical interfaces and city locations."
+                src={memosphereMoodboard}
+                alt="Moodboard containing examples of apps and space like inspiration."
               ></img>
               <img
-                src={hotspotGraphicProfile}
-                alt="Graphic profile with typeface, color palette and different button states."
+                src={memosphereGraphicProfile}
+                alt="Graphic profile with typeface, color palette and different buttons."
               ></img>
             </div>
           </div>
           <div className="section-section">
             <h3>Hi-Fi</h3>
             <p>
-              Utifrån moodboarden, den grafiska profilen och den uppdaterade
-              lo-fien skapades en hi-fi i Figma, nedan är några av sidorna vi
-              gjorde.
+              Utifrån moodboarden, den grafiska profilen och våra gemensamma
+              förslag tog vi fram en hi-fi i Figma.
             </p>
-            <img
-              className="hotspotHiFi"
-              src={hotspotHiFi}
-              alt="5 of the screens of the final hi-fi prototype."
-            ></img>
+            <div className="image-grid">
+              {hiFiImages.map((src, index) => (
+                <img
+                  className="grid-images"
+                  key={index}
+                  src={src}
+                  alt={`Image ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       ),
@@ -205,7 +246,7 @@ function Hotspot() {
         "Från Figmaprototyp till semifungerande applikation med användarhantering och kartfunktion i React Native och Firestore databas.",
       content: (
         <div>
-          <p>
+          {/* <p>
             Under programmeringsfasen satt vi mycket tillsammans i gruppen i
             början för att planera och sätta upp en enhetlig struktur för
             projektet. Vi satte upp en kanban där alla fick ta egna uppgifter
@@ -236,14 +277,14 @@ function Hotspot() {
               håller användardokumenten mer hanterbara.
             </p>
             <img
-              src={hotspotDatabase}
+              src={memosphereDatabase}
               alt="Visualisation of the databasestructure."
             ></img>
           </div>
           <div className="section-section">
             <h3>Kartan och pins</h3>
             <p>
-              Kartan och pins är centrala delar av Hotspot. För kartvisningen
+              Kartan och pins är centrala delar av Memosphere. För kartvisningen
               använder vi react-native-maps, som integrerar med Google Maps på
               Android och Apple Maps eller Google Maps på iOS. Aktuell plats
               bestäms med expo-location, vilket gör att kartan kan centreras på
@@ -292,7 +333,7 @@ function Hotspot() {
               ta bort en vän, eller klicka på kortet för att komma åt en mer
               detaljerad vy med samma funktionalitet.
             </p>
-          </div>
+          </div> */}
         </div>
       ),
     },
@@ -322,6 +363,7 @@ function Hotspot() {
       subtitle: "Vad jag gjort i projektet samt lite avslutande tankar.",
       content: (
         <div>
+          {/*
           <div>
             <p>
               Designdelen gjorde vi mestadels tillsammans men jag hade mest
@@ -329,23 +371,24 @@ function Hotspot() {
               blev mina fokus underutvecklingsfasen också. Det var en intressant
               sida att jobba med då den både innehöll svepanimationer,
               dropdowns, inladdning av data samt en lite mer avanerad
-              sökfunktion.
+              sökfunktion. 
               <br />
               <br />
-              Jag tog även på mig att fixa med databasen. Firebase var helt nytt
-              för mig och det var en väldigt givande utmaning! Jag gjorde det
-              mesta med databasen, från planering av struktur till ett service
-              lager och testning. Under slutfasen av projektet såg jag till att
-              integrera service-lagret med samtliga sidor i applikationen och
-              såg till att datan flödade smidigt mellan alla komponenter så att
-              applikationen fungerade som avsett.
+              Jag tog även på mig att fixa med databasen. Firebase
+              var helt nytt för mig och det var en väldigt givande utmaning! Jag
+              gjorde det mesta med databasen, från planering av struktur till
+              ett service lager och testning. Under slutfasen av projektet såg
+              jag till att integrera service-lagret med samtliga sidor i
+              applikationen och såg till att datan flödade smidigt mellan alla
+              komponenter så att applikationen fungerade som avsett. 
               <br />
               <br />
-              Det roligaste med projektet var att vi som grupp kunde skapa så
-              pass mycket funktionalitet på kort tid tack vare vårt samarbete.
-              Jag fick även chansen att lära mig om NoSQL och Firebase och min
-              roll gjorde att jag hade en rätt bra överblick över hur allt
-              skulle hänga ihop i slutändan.
+              Det
+              roligaste med projektet var att vi som grupp kunde skapa så pass
+              mycket funktionalitet på kort tid tack vare vårt samarbete. Jag
+              fick även chansen att lära mig om NoSQL och Firebase och min roll
+              gjorde att jag hade en rätt bra överblick över hur allt skulle
+              hänga ihop i slutändan.
             </p>
           </div>
           <div className="section-section">
@@ -357,34 +400,36 @@ function Hotspot() {
               pins efter vänner, eller lägga till en vän direkt från dennes
               profilsida. Det finns även en del buggar då vi inte hann testa
               applikationen i slutet, samt en del varningar som dyker upp i
-              expo, dessa verkar dock inte påverka funktionaliteten.
+              expo, dessa verkar dock inte påverka funktionaliteten. 
               <br />
               <br />
-              Hade vi fått göra om projektet hade jag struntat i att försöka
-              fixa google signin då det inte var kompatibelt med expo i
-              slutändan. Jag hade även sett till att vi gjorde en ännu mer
-              utförlig planering i början för att se till att alla delar passade
-              ihop bättre i slutet. Kanske hade jag struntat i viss
-              funktionalitet såsom login för att hinna med tester på slutet för
-              att få bort ännu fler buggar och varningar.
+              Hade vi
+              fått göra om projektet hade jag struntat i att försöka fixa google
+              signin då det inte var kompatibelt med expo i slutändan. Jag hade
+              även sett till att vi gjorde en ännu mer utförlig planering i
+              början för att se till att alla delar passade ihop bättre i
+              slutet. Kanske hade jag struntat i viss funktionalitet såsom login
+              för att hinna med tester på slutet för att få bort ännu fler
+              buggar och varningar. 
               <br />
               <br />
-              Trots detta är jag väldigt stolt över resultatet och det var ett
-              väldigt lärorikt projekt!{" "}
+              Trots detta är jag väldigt stolt över
+              resultatet och det var ett väldigt lärorikt projekt!{" "}
             </p>
           </div>
           <div className="space"></div>
+          */}
         </div>
       ),
     },
   ];
 
   return (
-    <div className="hotspotContainer">
-      <div className="hotspot-hero-container">
+    <div className="memosphere-container">
+      <div className="memosphere-hero-container">
         <ProjectOverview projectData={projectData} />
       </div>
-      <div className="contentContainer">
+      <div className="content-container">
         <div className="vertical-navbar">
           <VerticalNavbar sections={sections}></VerticalNavbar>
         </div>
@@ -402,4 +447,4 @@ function Hotspot() {
   );
 }
 
-export default Hotspot;
+export default Memosphere;

@@ -12,22 +12,7 @@
 }
 
 .heroContainer {
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  z-index: 4;
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-  position: sticky;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-image: url("../assets/projects/HotspotHeroImage.jpg");
+
 
   .heroBackground {
     background-image: url("../assets/projects/HotspotHeroImage.jpg");

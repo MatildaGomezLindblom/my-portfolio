@@ -7,7 +7,7 @@ import MoreAboutMe from './components/about/MoreAboutMe';
 import Contact from './components/contact/Contact';
 import ProjectsSection from './components/projects/ProjectsSection';
 import Hotspot from './components/projects/Hotspot';
-
+import Memosphere from './components/projects/Memosphere';
 
 import './styles/global.scss';
 import { useTheme } from './components/ThemeContext'; // Import the useTheme hook
@@ -26,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/MoreAboutMe" element={<MoreAboutMe />} />
           <Route path="/Hotspot" element={<Hotspot />} />
+          <Route path="/Memosphere" element={<Memosphere />} />
           <Route
             path="/"
             element={

@@ -9,8 +9,8 @@ function ProjectsSection() {
 
   const projects = [
     { id: "project-1", page: "/Hotspot", tags: "React Native • Användarhantering • UX • Firebase", title: "HOTSPOT - Appen för att spara och dela sina favoritplatser med vänner."},
-    { id: "project-2", page: "/Hotspot", tags: "", title: ""},
-    { id: "project-3", page: "/Hotspot", tags: "", title: ""},
+    { id: "project-2", page: "/Memosphere", tags: "React Native • OpenAI • UX • Firebase", title: "MEMOSPHERE - Håll kontakt med nära och kära med hjälp av AI."},
+    { id: "project-3", page: "/Memosphere", tags: "", title: ""},
     { id: "project-4", page: "/Hotspot", tags: "", title: ""},
   ];
 
