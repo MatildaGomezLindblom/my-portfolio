@@ -14,6 +14,8 @@ import memosphereVersion3 from "../../assets/projects/Memosphere/memosphereVersi
 import memosphereVersion1 from "../../assets/projects/Memosphere/memosphereVersion1.png";
 import memosphereVersion4 from "../../assets/projects/Memosphere/memosphereVersion4.png";
 
+import flowchartMemosphere from "../../assets/projects/Memosphere/flowchartMemosphere.png";
+
 import memosphereHiFi1 from "../../assets/projects/Memosphere/memosphereHiFi1.png";
 import memosphereHiFi2 from "../../assets/projects/Memosphere/memosphereHiFi2.png";
 import memosphereHiFi3 from "../../assets/projects/Memosphere/memosphereHiFi3.png";
@@ -29,11 +31,16 @@ import memosphereHiFi12 from "../../assets/projects/Memosphere/memosphereHiFi12.
 import memosphereHiFi13 from "../../assets/projects/Memosphere/memosphereHiFi13.png";
 import memosphereHiFi14 from "../../assets/projects/Memosphere/memosphereHiFi14.png";
 
-// import memosphereStoryboard from "../../assets/projects/Memosphere/memosphereStoryboard.png";
+import memosphereHomeScreen from "../../assets/projects/Memosphere/memosphereHomeScreen.png";
 import memosphereMoodboard from "../../assets/projects/Memosphere/memosphereMoodboard.png";
 import memosphereGraphicProfile from "../../assets/projects/Memosphere/memosphereGraphicalProfile.png";
-// import memosphereHiFi from "../../assets/projects/Memosphere/memosphereHiFi.png";
-// import memosphereDatabase from "../../assets/projects/Memosphere/memosphereDatabase.png";
+import memosphereCreateWeekScreen from "../../assets/projects/Memosphere/memosphereCreateWeekScreen.png";
+import databaseMemosphere from "../../assets/projects/Memosphere/databaseMemosphere.png";
+
+import memosphereCreateWeekScreen2 from "../../assets/projects/Memosphere/memosphereCreateWeekScreen2.png";
+import memosphereProfileScreen from "../../assets/projects/Memosphere/memosphereProfileScreen.png";
+//import memosphereGraphicProfile from "../../assets/projects/Memosphere/memosphereGraphicalProfile.png";
+
 import ImageCarousel from "./Carousel";
 import { FaGithub } from "react-icons/fa";
 
@@ -139,20 +146,19 @@ function Memosphere() {
               applikationen använda sig av openAIs (vid denna tid nya funktion)
               Vision samt en databas med frågor för att generera unika frågor
               för användaren att besvara. Detta gör varje veckosummering unik
-              och intressant. 
-              <br/>
-              <br/>
-              I applikationen får man se sina vänner i en
-              innovativ miljö där man istället för att se en lista av vänner,
-              får se sina vänners karaktärer på en interaktiv canvas. Detta ska
-              ge en unik och lekfull touch. Har kan man alltså navigera sig
-              mellan sin egna profil och andras för att se deras
-              veckosummeringar. 
-              <br/>
-              <br/>
-              Vi hade även en tanke om att få in annan data
-              från användarens enhet, exempelvis hälsodata, för att kunna ställa
-              mer personliga frågor om detta.
+              och intressant.
+              <br />
+              <br />
+              I applikationen får man se sina vänner i en innovativ miljö där
+              man istället för att se en lista av vänner, får se sina vänners
+              karaktärer på en interaktiv canvas. Detta ska ge en unik och
+              lekfull touch. Har kan man alltså navigera sig mellan sin egna
+              profil och andras för att se deras veckosummeringar.
+              <br />
+              <br />
+              Vi hade även en tanke om att få in annan data från användarens
+              enhet, exempelvis hälsodata, för att kunna ställa mer personliga
+              frågor om detta.
             </p>
             <img
               className="memosphere-storyboard"
@@ -185,6 +191,12 @@ function Memosphere() {
               className="memosphere-storyboard"
               src={LoFiSketchMemosphere}
               alt="Lo-fi sketch with a few rough pages and some text and arrows."
+            ></img>
+            <p>Denna lade även grunden till vårt flöde.</p>
+            <img
+              className="memosphere-storyboard"
+              src={flowchartMemosphere}
+              alt="flow chart of the memosphere app."
             ></img>
           </div>
           <div className="section-section">
@@ -243,114 +255,199 @@ function Memosphere() {
       id: "section2",
       title: "UTVECKLING",
       subtitle:
-        "Från Figmaprototyp till semifungerande applikation med användarhantering och kartfunktion i React Native och Firestore databas.",
+        "Från Figmaprototyp till fungerande applikation med AI-stöd i React Native och Firestore databas.",
       content: (
         <div>
-          {/* <p>
-            Under programmeringsfasen satt vi mycket tillsammans i gruppen i
-            början för att planera och sätta upp en enhetlig struktur för
-            projektet. Vi satte upp en kanban där alla fick ta egna uppgifter
-            eftersom, då satt vi mycket enskilt. I slutet satt vi några dagar
-            tillsammans för att koppla ihop alla delar och färdigställa det som
-            inte blivit klart.
+          <p>
+            Under utvecklingen delade vi upp arbetet genom en kanban via GitHub.
+            Vi började med att fördjupa oss i varsin ny teknik för att sedan
+            presentera det vi tagit reda på för resten av gruppen. Därefter
+            började vi programmera. Vi programmerade mycket enskilt men även en
+            del tillsammans mot slutet.
           </p>
           <div className="section-section">
-            <h3>Databasen</h3>
+            <h3>Val av AI</h3>
             <p>
-              Vi valde att använda Firestore som databas för vårt projekt på
-              grund av dess skalbarhet och enkelhet samt dess stöd för
-              realtidsuppdateringar. Detta var min första erfarenhet med en
-              NoSQL-databas, vilket krävde en del research för att fastställa en
-              databasstruktur vi var nöjda med. Vi övervägde två alternativ för
-              att lagra vänlistor: antingen som en del av användardokumentet
-              eller som en separat collection. Vi valde att skapa en separat
-              collection för vänner. Detta förbättrar prestandan och
-              skalbarheten genom att undvika att behöva läsa hela
-              användardokumentet varje gång vi hämtar en användares vänlista,
-              även om det gör querys lite mer komplexa.
+              Vi valde att använda oss av OpenAI då det är en användarvänlig och
+              rätt billig lösning som några i gruppen redan hade använt sig av i
+              tidigare projekt. När vi startade vårt projekt hade det även
+              kommit en hel del uppdateringar till tjänsten som vi såg fram emot
+              att utnyttja! Dessa var:
               <br />
               <br />
-              På samma sätt hanterar vi pins. Vi har en separat collection för
-              användar-ID som innehåller en subcollection för pins, där varje
-              dokument representerar en användares pin. Denna struktur
-              underlättar hanteringen och hämtningen av pins samtidigt som den
-              håller användardokumenten mer hanterbara.
-            </p>
-            <img
-              src={memosphereDatabase}
-              alt="Visualisation of the databasestructure."
-            ></img>
-          </div>
-          <div className="section-section">
-            <h3>Kartan och pins</h3>
-            <p>
-              Kartan och pins är centrala delar av Memosphere. För kartvisningen
-              använder vi react-native-maps, som integrerar med Google Maps på
-              Android och Apple Maps eller Google Maps på iOS. Aktuell plats
-              bestäms med expo-location, vilket gör att kartan kan centreras på
-              användarens position. För att snabbt söka efter och navigera till
-              specifika platser använder vi
-              react-native-google-places-autocomplete, som ger sökförslag medan
-              användaren skriver.
+              <b>gpt-4-turbo:</b> en snabbare och billigare version av gpt-4.
               <br />
               <br />
-              Pins på kartan placeras ut vid inladdning och representerar både
-              användarens egna pins och deras vänners pins från databasen. Varje
-              pin har en unik färg och ikon baserat på dess kategori, och
-              användaren kan filtrera pins efter kategori, till exempel
-              stränder.
+              <b>DALL-E 3:</b> en AI-modell för bildgenerering som vid behov
+              utvecklar användarens prompt för att skapa ännu mer detaljerade
+              och kreativa bilder.
               <br />
               <br />
-              När en användare skapar en pin, lägger de till en bild, plats,
-              beskrivning och titel. Den nya pinnen syns på både användarens
-              egen och vänners kartor. Varje pin berikas med platsinformation
-              från Google Places API. Om flera användare inom samma
-              vänskapsgrupp skapar pins på samma plats, kommer dessa att
-              grupperas under en gemensam pin, vilket förhindrar att flera pins
-              skapas för samma favoritställe.
+              <b>gpt-4-vision:</b> en avancerad AI-modell som kombinerar text-
+              och bildbehandling för att analysera bilder. Den kan förstå och
+              generera text baserat på visuella insikter, vilket gör den kapabel
+              att analysera och svara på frågor om bilder samt skapa text som
+              beskriver eller relaterar till bilder (sjukt coolt).
             </p>
           </div>
-          <div className="section-section">
-            <h3>Användare och vänner</h3>
-            <p>
-              För att skapa ett konto i appen behöver användaren ange en
-              e-postadress, namn och lösenord. Användaren har även möjlighet att
-              ladda upp en profilbild från sin kamerarulle. På sin profil kan
-              användaren se sin egen information, ett flöde av sina pins, samt
-              en förhandsvisning av sina vänner. Användaren kan också klicka för
-              att gå till vänners profiler.
-              <br />
-              <br />
-              När man navigerar till en vänsida laddar applikationen användarens
-              vänlista. Vänförfrågningar visas högst upp på sidan, där endast en
-              förfrågan visas initialt. Nedanför vänförfrågningarna visas en
-              lista över användarens vänner. Sidan innehåller en sökruta högst
-              upp där användaren kan söka efter användarnamn. Vid sökning visas
-              matchande vänner först, följt av vänner till vänner och sist
-              användare som inte har någon gemensam vän med sökaren.
-              Profilkorten för vänner visar bild, namn och eventuell vänstatus.
-              Användaren kan svepa på ett kort för att snabbt lägga till eller
-              ta bort en vän, eller klicka på kortet för att komma åt en mer
-              detaljerad vy med samma funktionalitet.
-            </p>
-          </div> */}
+          <div className="section-section memosphere-text-and-image">
+            <div>
+              <h3>Databasen</h3>
+              <p>
+                På grund av den begränsade tiden i projektet valde vi att köra
+                på en Firestore databas då det var något vi hade koll på sedan
+                tidigare projekt.
+                <br />
+                <br />
+                <b>Users</b> håller all användarinformation, bland annat färgen
+                på ens karaktärs rymddräkt och en profilbild för en mer
+                personlig touch.
+                <br />
+                <br />
+                <b>Friends</b> håller koll på alla användarens vänner och
+                vänförfrågningar.
+                <br />
+                <br />
+                <b>Weeks</b> innehåller information om veckouppdateringarna för
+                alla användare.
+                <br />
+                <br />
+                För att sedan hämta och hantera informationen från databasen
+                gjordes ett servicelager.
+              </p>
+            </div>
+            <div>
+              <img
+                src={databaseMemosphere}
+                alt="Visualisation of the databasestructure."
+              ></img>
+            </div>
+          </div>
+          <div className="section-section memosphere-text-and-image">
+            <div>
+              <img
+                src={memosphereHomeScreen}
+                alt="Homescreen with avatars in space and some buttons."
+              ></img>
+            </div>
+            <div>
+              <h3>Hemskärm med användare i rymdsetting</h3>
+              <p>
+                Hemskärmen visar dig och dina vänner som rymdavatarer. Du kan
+                välja en profilbild och en färg för din avatar. För närvarande
+                finns fyra färger, men fler kan läggas till. Avatarerna dyker
+                upp slumpmässigt och din egen avatar är lite större och alltid
+                centrerad. Du kan flytta runt avatarerna fritt på skärmen, och
+                genom att klicka på en avatar går du till personens profil och
+                veckoflödet.
+                <br />
+                <br />
+                Menyknappen erbjuder tre alternativ: inställningar, hantera
+                vänner, och en visselpipa. Dessa är inte implementerade men
+                tanken med visselpipan var att den skulle samla alla vänners
+                avatarer på ett organiserat sätt.
+                <br />
+                <br />
+                Knappen "skapa vecka" leder till publiceringsflödet.
+              </p>
+            </div>
+          </div>
+          <div className="section-section memosphere-text-and-image">
+            <div>
+              <h3>Välja veckans bild</h3>
+              <p>
+                För att skapa en vecka kan man ta en egen bild från sin
+                kamerarulle eller direkt med kameran, eller generera en med AI.
+                För att ta egna bilder användes expo-picker och för att generera
+                användes DALL-E 3 genom OpenAI.
+                <br />
+                <br />
+                För att generera en bild skickar användaren själv in en prompt
+                som skickas vidare till OpenAI som svarar med en bild. Medan en
+                bild genereras får användaren en loading screen med förklarande
+                text och en liten rymdlik animation för en ökad
+                användarupplevelse och en minskad upplevd väntetid.
+              </p>
+            </div>
+            <div>
+              <img
+                src={memosphereCreateWeekScreen}
+                alt="Initial screens for creating a new week."
+              ></img>
+            </div>
+          </div>
+          <div className="section-section memosphere-text-and-image">
+            <div>
+              <img
+                src={memosphereCreateWeekScreen2}
+                alt="Initial screens for creating a new week."
+              ></img>
+            </div>
+            <div>
+              <h3>Skriva veckans text</h3>
+              <p>
+                När användaren valt bild skickas den till OpenAI's API som
+                analyserar den för att generera inspiration till användaren. För
+                denna analys används den då nya funktionen gpt-4-vision, en
+                modell som kan förstå och generera text baserat på visuella
+                insikter. Till denna modell skickade vi alltås bilden samt
+                följande prompt:
+                <br />
+                <br />
+                <i>
+                  Can you generate three suggestions for captions to this image.
+                  Respond in Swedish.
+                </i>
+                <br />
+                <br />
+                Tillbaka får användare 3 förslag på captions som vid klick förs
+                in i inputfältet där den kan redigeras eller förlängas.
+                <br />
+                <br />
+                Därefter får man skriva fritt om sin vecka och för detta ges 3
+                förslag som plockas slumpmässigt ur en databas av inspiration.
+              </p>
+            </div>
+          </div>
+          <div className="section-section memosphere-text-and-image">
+            <div>
+              <h3>Profilsidan</h3>
+              <p>
+                När en avatar blir klickad visas en overlay med profilens namn,
+                avatar, användarnamn och en sammanfattning av personens veckor.
+                De senaste veckorna kan scrollas horizontellt men man kan även
+                klicka på <i>visa alla</i> för att komma till en scrollbar lista
+                av alla veckor.
+                <br />
+                <br />
+                Klickar man på en vecka får man se hela veckosammanfattningen
+                med text och bild.
+              </p>
+            </div>
+            <div>
+              <img
+                src={memosphereProfileScreen}
+                alt="Initial screens for creating a new week."
+              ></img>
+            </div>
+          </div>
         </div>
       ),
     },
     {
       id: "results",
       title: "RESULTAT",
-      subtitle: "Demovideo och länk till projektet på GitHub.",
+      subtitle: "Demovideo och länk till GitHub repo.",
       content: (
         <div className="section-section">
           <iframe
-            src={`https://www.youtube.com/embed/1zZFFfUX72g`}
+            src={`https://www.youtube.com/embed/fiObRnq3OsM`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             title="Embedded youtube"
           />
-          <a href="https://github.com/OlleStrandberg/Pumaproject">
+          <a href="https://github.com/OscarTideman/MemoSphere">
             {" "}
             <FaGithub /> GitHub repo här
           </a>
@@ -363,62 +460,69 @@ function Memosphere() {
       subtitle: "Vad jag gjort i projektet samt lite avslutande tankar.",
       content: (
         <div>
-          {/*
           <div>
             <p>
-              Designdelen gjorde vi mestadels tillsammans men jag hade mest
-              fokus på vännersidan och knappar, vilket gjorde att dessa även
-              blev mina fokus underutvecklingsfasen också. Det var en intressant
-              sida att jobba med då den både innehöll svepanimationer,
-              dropdowns, inladdning av data samt en lite mer avanerad
-              sökfunktion. 
+              Idén och den initiala skissen på appen kom vi fram till
+              tillsammans. Därefter skapade vi egna tolkningar av skissen, här
+              gjorde jag Version 1 som visades tidigare. I Hi-Fi:en gjorde vi
+              mycket tillsammans men jag hade nog mest fokus på
+              publiseringsflödet. Jag fick även ansvaret över att researcha
+              OpenAi innan vi började använda det.
               <br />
               <br />
-              Jag tog även på mig att fixa med databasen. Firebase
-              var helt nytt för mig och det var en väldigt givande utmaning! Jag
-              gjorde det mesta med databasen, från planering av struktur till
-              ett service lager och testning. Under slutfasen av projektet såg
-              jag till att integrera service-lagret med samtliga sidor i
-              applikationen och såg till att datan flödade smidigt mellan alla
-              komponenter så att applikationen fungerade som avsett. 
+              Då jag precis jobbat med Firebase i kursen innan tog jag på mig
+              att strukturera och sätta upp databasen samt göra ett service
+              lager. Jag såg även till att appen kunde hantera bilder som
+              base64, något vi inte lyckats med i ett tidigare projekt.
               <br />
               <br />
-              Det
-              roligaste med projektet var att vi som grupp kunde skapa så pass
-              mycket funktionalitet på kort tid tack vare vårt samarbete. Jag
-              fick även chansen att lära mig om NoSQL och Firebase och min roll
-              gjorde att jag hade en rätt bra överblick över hur allt skulle
-              hänga ihop i slutändan.
+              Jag skapade även komponenten för knappar och progress dots för
+              publiseringsflödet samt jobbade mycket på sammanställningen av
+              detta flöde i slutet. Jag gjorde även komponenten för att visa upp
+              och få in inspiration till inputfältet samt en del smågrejor som
+              pop-ups och knappar.
+              <br />
+              <br />
+              Detta projekt var särskilt kul eftersom att vi i gruppen redan
+              kunde en del sedan tidigare projekt, vilket gjorde att vi hade tid
+              att göra saker rätt bra. Det var extra kul att få använda sig av
+              så pass ny teknik från OpenAI, Vision var faktiskt överraskande
+              bra! Det roligaste i det här projektet var att jag kände mig rätt
             </p>
           </div>
           <div className="section-section">
             <h3>Förbättringsmöjligheter</h3>
             <p>
-              På grund av den begränsade tiden, plus att vi använde en del nya
-              ramverk, hann vi inte göra en fullt fungerande applikation. Den
-              saknar fortfarande mycket önskvärd funktionalitet som att filtrera
-              pins efter vänner, eller lägga till en vän direkt från dennes
-              profilsida. Det finns även en del buggar då vi inte hann testa
-              applikationen i slutet, samt en del varningar som dyker upp i
-              expo, dessa verkar dock inte påverka funktionaliteten. 
+              På grund av den begränsade tiden hann vi inte göra en fullt
+              fungerande applikation. Vi prioriterade bort inloggning, vänner
+              och annan grundläggande funktionalitet för att kunna fokusera på
+              det som kändes nytt och roligt, vilket var ett bra val.
               <br />
               <br />
-              Hade vi
-              fått göra om projektet hade jag struntat i att försöka fixa google
-              signin då det inte var kompatibelt med expo i slutändan. Jag hade
-              även sett till att vi gjorde en ännu mer utförlig planering i
-              början för att se till att alla delar passade ihop bättre i
-              slutet. Kanske hade jag struntat i viss funktionalitet såsom login
-              för att hinna med tester på slutet för att få bort ännu fler
-              buggar och varningar. 
+              Hade vi fått mer tid hade vi velat göra en mer dynamisk bagrund på
+              hemskärmen, en rörlig som användaren kan navigera runt mer inom.
+              Vi hade även en tanke om att man skulle kunna låta användaren byta
+              till andra teman än rymden. Vi hade även velat göra något mer med
+              inspirationen som ges när man ska skriva om sin vecka. Vi hade
+              bland annat en tanke om att appen ska hämta hälsodata som kan
+              användas som förslag vid skapandet av veckosammanfattningarna,
+              exempelvis: <i>I onsdags gick jag 15000 steg för att...</i>
               <br />
               <br />
-              Trots detta är jag väldigt stolt över
-              resultatet och det var ett väldigt lärorikt projekt!{" "}
+              Hade vi fått göra om projektet hade jag kanske försökt se över
+              designen en runda till för att göra en bättre lösning för
+              profilsidorna. Designen var aldrig fokus i detta projekt, men en
+              riktig användartestning hade inte skadat om mer tid fanns att
+              tillgå.
+              <br />
+              <br />
+              Med tanke på att Memosphere skapades under en rätt begränsad tid
+              är jag väldigt stolt över resultatet. Det var ett väldigt lärorikt
+              projekt där vi fick testa på många nya tekniker och utveckla de
+              färdigheter vi redan besatt!
             </p>
           </div>
           <div className="space"></div>
-          */}
         </div>
       ),
     },

@@ -299,7 +299,7 @@ function Hotspot() {
     {
       id: "results",
       title: "RESULTAT",
-      subtitle: "Demovideo och länk till projektet på GitHub.",
+      subtitle: "Demovideo och länk till GitHub repo.",
       content: (
         <div className="section-section">
           <iframe
