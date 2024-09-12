@@ -56,7 +56,7 @@ function ProjectOverview({ projectData }) {
         <div className="projectOverview">
           <div className="overviewSection">
             <div>
-              <h2>{projectData.title}</h2>
+              <h2>{projectData.title} {projectData.pillText && <span className="projectBadge">{projectData.pillText}</span>}</h2>
               <h4>{projectData.subtitle}</h4>
             </div>
             {projectData.sections.map((section, index) => (
