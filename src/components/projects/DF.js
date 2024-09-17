@@ -122,7 +122,7 @@ function Memosphere() {
       title: "FÖRSTUDIE",
       subtitle: "Projektetförberedelser och djupdykning i problemområdet.",
       content: (
-        <div>
+        <div className="DF-section">
           <p>
             I sökandet efter ett spännande uppdrag träffade vi på ett gäng på
             Knightec som hade ett intressant förslag. De visade oss sin fysiska
@@ -269,8 +269,8 @@ function Memosphere() {
       title: "LO-FI",
       subtitle: "Från idé till ett testat första förslag.",
       content: (
-        <div>
-          <div className="section-section">
+        <div className="DF-section">
+          <div>
             <h3>Lo-Fi</h3>
             <p>
               Varje gruppmedlem fick först göra var sin tolkning av de
@@ -334,7 +334,7 @@ function Memosphere() {
       title: "HI-FI",
       subtitle: "Den slutgiltiga hi-fi-prototypen i Figma.",
       content: (
-        <div>
+        <div className="DF-section">
           <p>
             HiFi prototypen gjordes i Figma. Designen utgår från de uppdaterade
             wireframsen och lägger till färg och form samt en del extra
@@ -444,7 +444,7 @@ function Memosphere() {
       title: "UTVECKLING",
       subtitle: "Från Figmaprototyp till utvecklad touchvy.",
       content: (
-        <div>
+        <div className="DF-section">
           <p>
             Utvecklingen av designen sker nu HT24 i en projektkurs som
             planerades av en av gruppmedlemmarna under ett sommarjobb hos

@@ -44,8 +44,8 @@ function VerticalNavbar({ sections }) {
   }
 
   return (
-    <div className="verticalNavbarContainer">
-      <div className="verticalNavbarContainer-top"></div>
+    <div className="vertical-navbar-container">
+      <div className="vertical-navbar-container-top"></div>
       <a onClick={(e) => {
           e.preventDefault();
           scrollToTop();
