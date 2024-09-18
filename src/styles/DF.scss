@@ -7,6 +7,11 @@
   margin-top: -41px;
   scroll-snap-type: y mandatory;
 
+  .DF-section, .project-section-title, .project-section-subtitle {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
   .DF-hero-container {
     display: flex;
     justify-content: center;
@@ -34,8 +39,7 @@
     scroll-snap-align: start;
 
     h3 {
-      padding-left: 5%;
-      padding-right: 5%;
+
     }
 
     h4 {
@@ -45,8 +49,7 @@
 
   .content {
     p {
-      padding-left: 5%;
-      padding-right: 5%;
+
       padding-bottom: 20px;
     }
 
@@ -83,15 +86,13 @@
       color: $secondary-color;
       padding-bottom: 0;
       margin-bottom: 0;
-      padding-left: 5%;
-      padding-right: 5%;
+
     }
 
     .project-section-subtitle {
       padding-top: 0;
       margin-top: 0;
-      padding-left: 5%;
-      padding-right: 5%;
+
     }
 
     img {
@@ -108,8 +109,6 @@
       padding-bottom: 40px;
       padding-right: 5%;
       padding-left: 5%;
-      margin-right: 5%;
-      margin-left: 5%;
     }
 
     .DF-split-view {
@@ -117,8 +116,7 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
-      padding-right: 5%;
-      padding-left: 5%;
+
       flex-wrap: wrap;
     }
 
@@ -133,8 +131,7 @@
     }
 
     .DF-text-and-image {
-      padding-right: 5%;
-      padding-left: 5%;
+
       padding-top: 20%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -163,8 +160,7 @@
   }
 
   .image-grid {
-    padding-left: 5%;
-    padding-right: 5%;
+
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -193,8 +189,9 @@
     .design-overview-content {
       padding: 80px 5%;
     }
+    
     #idea {
-      width: 14%;
+      width: 10%;
       padding-bottom: 20%;
     }
 
@@ -205,7 +202,11 @@
       padding-left: 5px;
     }
 
-    #memosphereLoFiPreview {
+    #DFLoFiPreview {
+      width: 39%;
+    }
+
+    #DFHiFiPreview {
       width: 35%;
     }
 
@@ -246,8 +247,7 @@
         height: auto;
       }
       .DF-text-and-image {
-        padding-right: 5%;
-        padding-left: 5%;
+
         padding-top: 20%;
         display: grid;
         grid-template-columns: 1fr;

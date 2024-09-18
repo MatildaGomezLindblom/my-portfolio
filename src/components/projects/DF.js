@@ -6,9 +6,13 @@ import ImageCarousel from "./Carousel";
 import { FaGithub } from "react-icons/fa";
 import DFPhotoWallFront from "../../assets/projects/DF/DFPhotoWallFront.png";
 import DFPhotoWallBackside from "../../assets/projects/DF/DFPhotoWallBackside.png";
-// import arrowDownRight from "../../assets/projects/Hotspot/arrowDownRight.png";
-// import idea from "../../assets/projects/Hotspot/Idea.png";
-// import HiFiExampleDF from "../../assets/projects/DF/HiFiExampleDF.png";
+
+import LoFiExampleDF from "../../assets/projects/DF/LoFiExampleDF.png";
+import arrowDownRight from "../../assets/projects/Hotspot/arrowDownRight.png";
+import arrowUpRight from "../../assets/projects/Hotspot/arrowUpRight.png";
+import idea from "../../assets/projects/Hotspot/Idea.png";
+import HiFiExampleDF from "../../assets/projects/DF/HiFiExampleDF.png";
+
 import DFotherServices from "../../assets/projects/DF/DFotherServices.png";
 import DFpersona1 from "../../assets/projects/DF/DFpersona1.png";
 import DFpersona2 from "../../assets/projects/DF/DFpersona2.png";
@@ -36,6 +40,7 @@ import DFChanges2 from "../../assets/projects/DF/DFChanges2.jpg";
 import DFChanges3 from "../../assets/projects/DF/DFChanges3.jpg";
 import DFChanges4 from "../../assets/projects/DF/DFChanges4.jpg";
 import DFChanges5 from "../../assets/projects/DF/DFChanges5.jpg";
+import DFFinalHiFi from "../../assets/projects/DF/DFFinalHiFi.png";
 
 function Memosphere() {
   const projectData = {
@@ -119,6 +124,23 @@ function Memosphere() {
   const sections = [
     {
       id: "section1",
+      title: "DESIGNINTRO",
+      subtitle: "En gedigen designprocess från koncept till interaktiv Hi-Fi i Figma.",
+      content: (
+        <div>
+          <div className="design-overview">
+              <div className="design-overview-content">
+                <img id="idea" src={idea}></img>
+                <img id="arrowDownRight" src={arrowDownRight}></img>
+                <img id="DFLoFiPreview" src={LoFiExampleDF}></img>
+                <img id="arrowUpRight" src={arrowUpRight}></img>
+                <img id="DFHiFiPreview" src={HiFiExampleDF}></img>
+              </div>
+            </div>
+        </div>
+      )},
+    {
+      id: "section2",
       title: "FÖRSTUDIE",
       subtitle: "Projektetförberedelser och djupdykning i problemområdet.",
       content: (
@@ -265,7 +287,7 @@ function Memosphere() {
       ),
     },
     {
-      id: "section2",
+      id: "section3",
       title: "LO-FI",
       subtitle: "Från idé till ett testat första förslag.",
       content: (
@@ -305,7 +327,7 @@ function Memosphere() {
               ))}
             </div>
           </div>
-          <div className="section-section">
+          <div>
             <h3>Testning av wireframes</h3>
             <p>
               Testningen genomfördes på beställare och handledare på Knightec
@@ -330,7 +352,7 @@ function Memosphere() {
       ),
     },
     {
-      id: "section3",
+      id: "section4",
       title: "HI-FI",
       subtitle: "Den slutgiltiga hi-fi-prototypen i Figma.",
       content: (
@@ -435,12 +457,17 @@ function Memosphere() {
           <div className="section-section">
             <h3>Slutgiltig HiFi</h3>
             <a href="https://www.figma.com/proto/ChfODED8YAIHhoZB7INNGf/Digital-Fotov%C3%A4gg?node-id=377-3971&node-type=canvas&t=QzIQgLg49YoH5Sbj-1&scaling=min-zoom&content-scaling=fixed&page-id=365%3A3118&starting-point-node-id=377%3A3971&show-proto-sidebar=1">Länkt till prototyp i Figma här!</a>
+            <img
+            src={DFFinalHiFi}
+            alt="The graphical profile inspired by Knightecs graphical identity."
+            >
+            </img>
           </div>
         </div>
       ),
     },
     {
-      id: "section4",
+      id: "section5",
       title: "UTVECKLING",
       subtitle: "Från Figmaprototyp till utvecklad touchvy.",
       content: (
@@ -455,30 +482,8 @@ function Memosphere() {
       ),
     },
     {
-      id: "results",
-      title: "RESULTAT",
-      subtitle: "Demovideo och länk till GitHub repo.",
-      content: (
-        <div className="section-section">
-          <iframe
-            src={`https://www.youtube.com/embed/fiObRnq3OsM`}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="Embedded youtube"
-          />
-          <a href="https://github.com/OscarTideman/MemoSphere">
-            {" "}
-            <FaGithub /> GitHub repo här
-          </a>
-        </div>
-      ),
     },
     {
-      id: "section5",
-      title: "MITT BIDRAG",
-      subtitle: "Vad jag gjort i projektet samt lite avslutande tankar.",
-      content: <div></div>,
     },
   ];
 
