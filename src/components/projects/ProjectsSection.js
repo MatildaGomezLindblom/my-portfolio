@@ -10,8 +10,8 @@ function ProjectsSection() {
   const projects = [
     { id: "project-1", page: "/Hotspot", tags: "React Native • Användarhantering • UX • Firebase", title: "HOTSPOT - Appen för att spara och dela sina favoritplatser med vänner."},
     { id: "project-2", page: "/Memosphere", tags: "React Native • OpenAI • UX • Firebase", title: "MEMOSPHERE - Håll kontakt med nära och kära med hjälp av AI."},
-    { id: "project-3", page: "/DF", tags: "Next • Typescript • UX • Supabase", title: "DIGITAL FOTOVÄGG - Ett digitalt och interaktivt komplement till Knightecs fysiska fotovägg."},
-    { id: "project-4", page: "/Hotspot", tags: "", title: ""},
+    { id: "project-3", page: "/DF", tags: "Next • Knightec • UX • Supabase", title: "DIGITAL FOTOVÄGG - Ett digitalt och interaktivt komplement till Knightecs fysiska fotovägg."},
+    { id: "project-4", page: "/SoB", tags: "Verksamhetsutveckling • Internship • UX • CGI • Region Västernorrland", title: "VÄRDESKAPANDE DIGITALA TJÄNSTER I VÅRDEN - Förslag på hur regionen kan öka användningen av tjänsten Stöd och Behandling."},
   ];
 
   const handleImageClick = (project) => {

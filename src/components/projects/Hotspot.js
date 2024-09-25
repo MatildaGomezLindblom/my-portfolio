@@ -372,6 +372,12 @@ function Hotspot() {
               Trots detta är jag väldigt stolt över resultatet och det var ett
               väldigt lärorikt projekt!{" "}
             </p>
+            <p>
+              <i>
+                Hotspot gjordes tillsammans med Vilma Christensen, Linnea
+                Nilsson, Olle Strandberg och Malin Ramstedt.
+              </i>
+            </p>
           </div>
           <div className="space"></div>
         </div>

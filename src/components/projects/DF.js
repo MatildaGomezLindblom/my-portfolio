@@ -42,7 +42,11 @@ import DFChanges4 from "../../assets/projects/DF/DFChanges4.jpg";
 import DFChanges5 from "../../assets/projects/DF/DFChanges5.jpg";
 import DFFinalHiFi from "../../assets/projects/DF/DFFinalHiFi.png";
 
-function Memosphere() {
+function DF() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   const projectData = {
     title: "Digital fotovägg",
     pillText: "! Pågående projekt",
@@ -469,7 +473,7 @@ function Memosphere() {
     {
       id: "section5",
       title: "UTVECKLING",
-      subtitle: "Från Figmaprototyp till utvecklad touchvy.",
+      subtitle: "Från Figmaprototyp till en utvecklad touchvy.",
       content: (
         <div className="DF-section">
           <p>
@@ -482,6 +486,14 @@ function Memosphere() {
       ),
     },
     {
+      id: "results",
+      title: "RESULTAT",
+      subtitle: "Kommer snart.",
+      content: (
+        <div className="DF-section">
+          <p><i>Projektet görs tillsammans med mina skickliga gruppmedlemmar och goda vänner Ebba Backlund, Moa Berquist, Melker Henriksson och Gustav Bolén!</i></p>
+        </div>
+      ),
     },
     {
     },
@@ -509,4 +521,4 @@ function Memosphere() {
     </div>
   );
 }
-export default Memosphere;
+export default DF;

@@ -521,6 +521,12 @@ function Memosphere() {
               projekt där vi fick testa på många nya tekniker och utveckla de
               färdigheter vi redan besatt!
             </p>
+            <p>
+              <i>
+                Stort tack till alla mina projektkamrater; Oscar Tideman, Lukas
+                Nordangård, Joakim Lindfors, Moa Bergquist, och Linnéa Esberg!
+              </i>
+            </p>
           </div>
           <div className="space"></div>
         </div>
