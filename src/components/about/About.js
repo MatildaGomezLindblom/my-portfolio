@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import "../../styles/About.scss";
 import ButtonPrimary from "../ButtonPrimary";
@@ -10,9 +10,34 @@ import MoreButton from "./MoreButton";
 import Me from "../../assets/about/MatildaCutOut.png";
 
 function About() {
+  const matildaRef = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect(); //stop observing after the first intersection
+        }
+      },
+      { threshold: 0.3 } 
+    );
+
+    if (matildaRef.current) {
+      observer.observe(matildaRef.current);
+    }
+
+    return () => {
+      if (matildaRef.current) {
+        observer.unobserve(matildaRef.current);
+      }
+    };
+  }, []);
+  
   return (
     <div className="about-container">
-      <div class="custom-shape-divider-bottom-1699302488">
+      {/* <div class="custom-shape-divider-bottom-1699302488">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -24,15 +49,25 @@ function About() {
             class="shape-fill"
           ></path>
         </svg>
-      </div>
+      </div> */}
+      <div className="space"></div>
+      <div className="fade-divider"></div>
       <div className="about-grid">
-        <div>
-          <img src={Me} className="matilda-cut-out" alt="Matilda" />
+        <div  ref={matildaRef}
+      className={`matilda-cut-out ${inView ? 'in-view' : ''}`}>
+          <img src={Me} alt="Matilda" />
         </div>
-        <div className="about-text-section">
-          <h2>Hej! Mitt namn är <mark>Matilda Gomez Lindblom</mark></h2>
-          <p>Som civilingenjörsstudent i interaktion och design kombinerar jag mina intressen för skapande och problemlösning med min breda kompetens för att skapa meningsfulla användarupplevelser där användaren står i centrum...</p>
-        <MoreButton></MoreButton>
+        <div className={`about-text-section ${inView ? 'in-view' : ''}`}>
+          <h2>
+            Hej! Mitt namn är <mark>Matilda Gomez Lindblom</mark>
+          </h2>
+          <p>
+            Som civilingenjörsstudent i interaktion och design kombinerar jag
+            mina intressen för skapande och problemlösning med min breda
+            kompetens för att skapa meningsfulla användarupplevelser där
+            användaren står i centrum...
+          </p>
+          <MoreButton></MoreButton>
         </div>
       </div>
     </div>

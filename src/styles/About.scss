@@ -9,6 +9,18 @@
   margin-top: 100vh;
 }
 
+.fade-divider {
+  height: 200px;
+  position: absolute;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: -200px;
+  overflow: hidden;
+  background: $background-fade;
+}
+
 .custom-shape-divider-bottom-1699302488 {
   position: absolute;
   margin-top: 0;
@@ -29,11 +41,6 @@
   padding: 10vw;
   justify-content: center;
   align-items: center;
-}
-
-.about-text-section {
-  margin-left: -70%;
-  z-index: 2;
 }
 
 //BUTTON STYLEING//////////////////////////////
@@ -66,13 +73,80 @@
   box-shadow: 2px;
 }
 
-.matilda-cut-out {
+/* .matilda-cut-out {
     width: 80%;
     clip-path: circle( 50% at center);
     background-color: $primary-color;
     z-index: 2;
     position: relative;
+} */
+@keyframes appear-right {
+  0% {
+    transform: translate(150%); 
+    opacity: 0; 
+  }
+  100% {
+    transform: translate(0%) ; 
+    opacity: 1; 
+  }
 }
+
+.about-text-section {
+  margin-left: -70%;
+  z-index: 2;
+  opacity: 0;
+
+  &.in-view { 
+    animation: appear-right 1.5s forwards; 
+    opacity: 1; 
+  }
+}
+
+@keyframes appear-left {
+  0% {
+    transform: translate(-150%, -70%) rotate(-55deg); 
+    opacity: 0; 
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-55deg); 
+    opacity: 1; 
+  }
+}
+
+.matilda-cut-out {
+  width: 40vw;
+  height: 90vw; 
+  background-color: $primary-color;
+  z-index: 2;
+  position: relative;
+  transform: translate(-50%, -50%) rotate(-55deg); 
+  border-radius: 0 0 1000px 1000px; 
+  overflow: hidden; 
+  margin-bottom: -100%;
+  opacity: 0;
+
+  &.in-view { 
+    animation: appear-left 0.8s forwards; 
+    opacity: 1; 
+  }
+
+  img {
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+    transform: rotate(55deg) translateY(50%) translateX(-20%); 
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    border-radius: inherit;
+    display: flex;
+  }
+}
+
+.space {
+  height: 600px;
+}
+
 
 //////darkmode/////////////////////
 
@@ -85,5 +159,10 @@
 
   .about-text-section {
     margin-left: 0;
+  }
+
+  .matilda-cut-out {
+    margin-bottom: -60%;
+
   }
 }
