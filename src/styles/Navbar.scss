@@ -54,6 +54,21 @@ nav {
 //alternative navbar
 .goBack {
   padding: 10px 20px;
+
+  button {
+    text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: $font-heading;
+  color: $text-color;
+  transition: all 0.4s ease;
+  background: none;
+  border: none;
+
+  &:hover {
+    color: $secondary-color;
+  }
+  }
 }
 
 /*button

@@ -2,46 +2,7 @@ import "../../styles/SoB.scss";
 import { useLayoutEffect } from "react";
 import VerticalNavbar from "./VerticalNavbar";
 import ProjectOverview from "./ProjectOverview";
-import ImageCarousel from "./Carousel";
-import { FaGithub } from "react-icons/fa";
-import { PiPopcornFill } from "react-icons/pi";
 import SoBBackground from "../../assets/projects/SoB/SoBBackground.png";
-// import SoBPhotoWallBackside from "../../assets/projects/SoB/SoBPhotoWallBackside.png";
-
-// import LoFiExampleSoB from "../../assets/projects/SoB/LoFiExampleSoB.png";
-// import arrowDownRight from "../../assets/projects/Hotspot/arrowDownRight.png";
-// import arrowUpRight from "../../assets/projects/Hotspot/arrowUpRight.png";
-// import idea from "../../assets/projects/Hotspot/Idea.png";
-// import HiFiExampleSoB from "../../assets/projects/SoB/HiFiExampleSoB.png";
-
-// import SoBotherServices from "../../assets/projects/SoB/SoBotherServices.png";
-// import SoBpersona1 from "../../assets/projects/SoB/SoBpersona1.png";
-// import SoBpersona2 from "../../assets/projects/SoB/SoBpersona2.png";
-// import SoBimpactEffortMatrix from "../../assets/projects/SoB/SoBimpactEffortMatrix.png";
-
-// import SoBLoFi1 from "../../assets/projects/SoB/SoBLoFi1.png";
-// import SoBLoFi2 from "../../assets/projects/SoB/SoBLoFi2.png";
-// import SoBLoFi3 from "../../assets/projects/SoB/SoBLoFi3.png";
-// import SoBLoFi4 from "../../assets/projects/SoB/SoBLoFi4.png";
-// import SoBLoFi5 from "../../assets/projects/SoB/SoBLoFi5.png";
-
-// import SoBloFiResults1 from "../../assets/projects/SoB/SoBloFiResults1.png";
-// import SoBloFiResults2 from "../../assets/projects/SoB/SoBloFiResults2.png";
-// import SoBloFiResults3 from "../../assets/projects/SoB/SoBloFiResults3.png";
-// import SoBloFiResults4 from "../../assets/projects/SoB/SoBloFiResults14.png";
-// import SoBloFiResults5 from "../../assets/projects/SoB/SoBloFiResults5.png";
-
-// import SoBKnightecInstagram from "../../assets/projects/SoB/SoBKnightecInstagram.png";
-// import SoBKnightecWebsite from "../../assets/projects/SoB/SoBKnightecWebsite.png";
-// import SoBIcons from "../../assets/projects/SoB/SoBIcons.png";
-// import SoBGraphicProfile from "../../assets/projects/SoB/SoBGraphicProfile.png";
-
-// import SoBChanges1 from "../../assets/projects/SoB/SoBChanges1.jpg";
-// import SoBChanges2 from "../../assets/projects/SoB/SoBChanges2.jpg";
-// import SoBChanges3 from "../../assets/projects/SoB/SoBChanges3.jpg";
-// import SoBChanges4 from "../../assets/projects/SoB/SoBChanges4.jpg";
-// import SoBChanges5 from "../../assets/projects/SoB/SoBChanges5.jpg";
-// import SoBFinalHiFi from "../../assets/projects/SoB/SoBFinalHiFi.png";
 
 function SoB() {
   useLayoutEffect(() => {
@@ -82,48 +43,6 @@ function SoB() {
       tasks: ["Verksamhetsutveckling", "Konsult", "UX/UI design", "Intervjuer", "Enkäter"],
     },
   };
-
-  const carouselImages = [
-    // {
-    //   src: SoBLoFi1,
-    //   legend:
-    //     "Version 1 har en sidebar med filtreringsfunktionalitet och en karusell med alla aktuella anslag på rullning.",
-    // },
-    // {
-    //   src: SoBLoFi2,
-    //   legend: "Verion 2 har profilen som en popup.",
-    // },
-    // {
-    //   src: SoBLoFi3,
-    //   legend: "Version 3 har mycket funktionalitet uppe i en navbar.",
-    // },
-    // {
-    //   src: SoBLoFi4,
-    //   legend:
-    //     "Version 4 har initialt en rätt avancerad sökfunktion som sedan byttes till en utfällningsbar filtreringsruta.",
-    // },
-    // {
-    //   src: SoBLoFi5,
-    //   legend:
-    //     "Version 5 har stort fokus på en mer proffisionell framsida och en mer personlig baksida på profilen.",
-    // },
-  ];
-
-  const LoFiImages = [
-    // SoBloFiResults1,
-    // SoBloFiResults2,
-    // SoBloFiResults3,
-    // SoBloFiResults4,
-    // SoBloFiResults5,
-  ];
-
-  const HiFiChangesImages = [
-    // SoBChanges1,
-    // SoBChanges2,
-    // SoBChanges3,
-    // SoBChanges4,
-    // SoBChanges5,
-  ];
 
   const sections = [
     {

@@ -11,7 +11,6 @@ import { motion } from "framer-motion";
 function Navbar({ toggleTheme }) {
   const navigate = useNavigate();
   const location = useLocation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
 
   function scrollToSection(id) {
@@ -113,8 +112,8 @@ function Navbar({ toggleTheme }) {
           </div>
         );
       default:
-        return <div class="goBack">
-        <a onClick={() => navigate(-1)}><FaArrowLeft /> TILLBAKA</a>
+        return <div className="goBack">
+        <button onClick={() => navigate(-1)}><FaArrowLeft /> TILLBAKA</button>
         </div>;
     }
   };

@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState, useEffect} from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/hero/Hero';
@@ -12,14 +12,27 @@ import DF from './components/projects/DF';
 import SoB from './components/projects/SoB';
 
 import './styles/global.scss';
-import { useTheme } from './components/ThemeContext'; // Import the useTheme hook
+import { useTheme } from './components/ThemeContext'; 
+import Loading from './components/Loading';
 
 function App() {
-  const { isDarkTheme, toggleTheme } = useTheme(); // Access the theme and toggleTheme function
+  const { isDarkTheme, toggleTheme } = useTheme(); 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); 
+    }, 2000); 
+
+    return () => clearTimeout(timer); 
+  }, []);
 
   return (
     <div className="app-container">
       <Router>
+      {isLoading ? (
+          <Loading />
+        ) : (
       <div
         className={isDarkTheme ? 'dark-mode' : 'light-mode'}
       >
@@ -52,6 +65,7 @@ function App() {
           />
         </Routes>
       </div>
+      )}
     </Router>
 
     </div>
