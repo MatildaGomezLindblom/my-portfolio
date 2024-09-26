@@ -18,20 +18,23 @@ import Loading from './components/Loading';
 function App() {
   const { isDarkTheme, toggleTheme } = useTheme(); 
   const [isLoading, setIsLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
+  //simulate loading
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false); 
+      setFadeOut(true); 
+      setTimeout(() => setIsLoading(false), 800); 
     }, 2000); 
 
-    return () => clearTimeout(timer); 
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="app-container">
       <Router>
       {isLoading ? (
-          <Loading />
+          <Loading  fadeOut={fadeOut}/>
         ) : (
       <div
         className={isDarkTheme ? 'dark-mode' : 'light-mode'}
