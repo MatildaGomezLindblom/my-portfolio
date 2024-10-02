@@ -6,6 +6,7 @@ import logo from "../assets/logo.png";
 
 import { FaBars } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
+import { IoMdDownload } from "react-icons/io";
 import { motion } from "framer-motion";
 
 function Navbar({ toggleTheme }) {
@@ -100,8 +101,8 @@ function Navbar({ toggleTheme }) {
                 </a>
               </li>
               <li onClick={removeActive}>
-                <a href="./CV.pdf" download="CV.pdf">
-                  CV
+                <a href="./CV.pdf" download="CV.pdf" className="CV">
+                  CV <IoMdDownload />
                 </a>
               </li>
               <li onClick={removeActive}>

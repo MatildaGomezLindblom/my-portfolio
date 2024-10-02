@@ -41,7 +41,7 @@
   }
 
   .fade-out {
-    animation: fadeOut 0.9s forwards;
+    animation: fadeOut 0.7s forwards;
   }
 
   @keyframes fadeOut {
@@ -67,7 +67,7 @@
     margin: -8px 0 0 -8px;
     width: 16px;
     aspect-ratio: 1;
-    background: $text-color;
+    background: $secondary-color;
     animation:
       l2-1 2s infinite,
       l2-2 1s infinite;

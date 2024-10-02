@@ -88,6 +88,7 @@ function ProjectsSection() {
       </motion.div>
           ))}
       </div>
+      <div className="space"></div>
     </div>
   );
 }

@@ -1,0 +1,81 @@
+@import "./variables.scss";
+
+.my-skills-container {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+
+    h2 {
+        margin-bottom: -10px;
+    }
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .skills-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon1 {
+    color: $secondary-color;
+  }
+
+  .icon2 {
+    color: $blue-color;
+  }
+
+  .icon3 {
+    color: $orange-color;
+  }
+
+  .skill {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 300px;
+    width: 30%;
+  }
+
+  .skills-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex;
+    justify-content: flex-start;
+    gap: 10px;
+
+    h3 {
+      margin-bottom: -10px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .skills {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .skill {
+      width: 100%;
+    }
+  }
+}

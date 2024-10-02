@@ -1,13 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, useHistory } from "react-router-dom";
 import "../../styles/About.scss";
-import ButtonPrimary from "../ButtonPrimary";
-import { FaArrowRight } from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
-import logo from "../../assets/logo.png";
-import star from "../../assets/about/buttonStar.svg";
 import MoreButton from "./MoreButton";
 import Me from "../../assets/about/MatildaCutOut.png";
+import MySkills from "./MySkills";
 
 function About() {
   const matildaRef = useRef(null);
@@ -65,11 +60,13 @@ function About() {
             Som civilingenjörsstudent i interaktion och design kombinerar jag
             mina intressen för skapande och problemlösning med min breda
             kompetens för att skapa meningsfulla användarupplevelser där
-            användaren står i centrum...
+            användaren står i centrum.
           </p>
-          <MoreButton></MoreButton>
+          {/* <MoreButton></MoreButton> */}
         </div>
       </div>
+      <MySkills></MySkills>
+      <div className="space"></div>
     </div>
   );
 }

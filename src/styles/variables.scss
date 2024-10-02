@@ -24,6 +24,7 @@
   --moon-color: #CED0E8;
   --muted-color: #545663;
   --background-fade: linear-gradient(0deg, rgba(22, 23, 30, 1) 0%, rgba(22, 23, 30, 0.8) 60%, rgba(22, 23, 30, 0) 100%);
+  --orange-color: #E4B354;
 }
 
 .light-mode {
@@ -35,6 +36,7 @@
   --sun-color: #fff385;
   --muted-color: #9495a5;
   --background-fade: linear-gradient(0deg, rgba(251, 251, 251, 1) 0%, rgba(251, 251, 251, 0.8) 60%, rgba(251, 251, 251, 0) 100%);
+  --orange-color: #FFA800;
 }
 
 $primary-color: var(--primary-color);
@@ -46,7 +48,8 @@ $muted-color: var(--muted-color);
 $sun-color: var(--sun-color);
 $moon-color: var(--moon-color);
 $background-fade: var(--background-fade);
-
+$blue-color: #6378FF;
+$orange-color: var(--orange-color);
 $font-text: var(--font-text);
 $font-heading: var(--font-heading);
 $space-m: var(--space-m);
